@@ -14,7 +14,7 @@ means onboarding is done; never re-run it, never re-ask what's recorded here.
 
 ## Active games
 
-*(none installed — `tools/add_game.sh <mixin-repo-url>`)*
+- `games/webdiplomacy/`: webDiplomacy, installed 2026-10-13 by coworld-webdiplomacy `optimizer/install.sh`. Every tool and skill of the lab is listed under "Tool and skill index" in `games/webdiplomacy/AGENTS.md`
 
 ## Open threads
 
@@ -32,5 +32,15 @@ anything durable to its proper home per the AGENTS.md state map)*
 
 ## Harness wiring
 
-*(recorded by the self-wiring step during onboarding: which runtime, which
-hooks were installed, date)*
+- Claude Code: wired by `optimizer/install.sh` on 2026-10-13. `CLAUDE.md` loads `AGENTS.md`
+  (and `games/webdiplomacy/CLAUDE.md` the lab manual). Skills are linked in
+  `.claude/skills/`; `.claude/settings.json` runs `rotate_lessons.sh` and the lab's
+  `check_clis.py` and `check_coworld.py` at SessionStart, and both stop nudges at Stop. The IDE (`ide/`) adds
+  `ide/ide hook <event>` at SessionStart, UserPromptSubmit, PostToolUse, Stop and SessionEnd
+  (they hand the user's browser messages to the session and tell the page when it ends), a
+  background waiter (`ide/ide hook Rewake`, marked `asyncRewake`) at the first four and at
+  FileChanged (the IDE's chat file) that wakes an idle or interrupted session, the
+  `webdip-ide` server in `.mcp.json`, and the `webdiplomacy-ide` skill link. The lab's `press-audit`, `opponent-profile` and
+  `matchup-writeup` skills are linked in `.claude/skills/` too. Nothing to do.
+- Any other runtime: not wired. Do the self-wiring step in `harness/README.md`
+  and record it here.

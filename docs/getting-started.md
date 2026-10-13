@@ -124,19 +124,30 @@ received it; a later session re-confirms before any submission.
 just logged into (the Softmax platform — where the games run, the
 leaderboards live, and their player will compete).
 
-### 2 · Pick a game
+### 2 · Your game: webDiplomacy
 
-Show what's available (`coworld leagues`) with one plain line per game. When
-they pick, install its mixin:
+This optimizer already has its game: the webDiplomacy lab is installed in
+`games/webdiplomacy/` and listed under "Active games" in `WORKING_CONTEXT.md`.
+**Do not run `tools/add_game.sh`** and do not offer other games.
 
-```
-tools/add_game.sh <mixin-repo-url>
-```
-
-Explain what just happened: their optimizer now has a **lab** for this game —
-its rules, its community's earned knowledge, and the tools to measure it.
+Show the two webDiplomacy leagues with one plain line each: the main league plays
+with press (negotiation), the Gunboat league without. **Work in the main (press)
+league** unless the user asks for Gunboat: the reference policy builds in press
+mode by default. Say early that a hosted press game runs about 50 minutes and a batch
+comes back an hour or two after launch (the lab manual's "Run one A/B" has the
+dated numbers), so the first evaluation will finish after a one-hour session;
+launch it before the wrap and read it next time. The league IDs
+and the standings commands are under "Leagues" in `games/webdiplomacy/docs/game.md`; plain
+`coworld leagues` lists every public league, so don't scan it. Explain
+that their optimizer already has a **lab** for this game: its rules, a reference
+policy, and the tools and skills to measure it. The lab ships no knowledge of the
+current field of opponents: that comes from their own games.
 Then set the expectation for the next beat: **"before we change anything,
 we're going to learn how this game is actually won."**
+
+This optimizer also has a local web page, the IDE: offer to open it
+(`ide/ide start --open`) when there is a replay, a result or a report worth
+looking at together. `games/webdiplomacy/skills/ide/SKILL.md` has the commands.
 
 ### 3 · Understand the game and its meta
 

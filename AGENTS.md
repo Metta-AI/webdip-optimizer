@@ -259,6 +259,10 @@ in a lab:
    practices in the lab's best_practices, game state in the lab's
    WORKING_CONTEXT.
 
+**webDiplomacy lab:** every tool and every skill of the lab is listed once, with the
+skills that use each tool, under "Tool and skill index" in `games/webdiplomacy/AGENTS.md`.
+Look there before writing an analysis script.
+
 Core skills never contain game conditionals; mixins never modify core files.
 If a game needs something the contract has no name for, that's a seed design
 change to raise with the human — not a hack.
