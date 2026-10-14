@@ -176,21 +176,26 @@ def paired_request(args: argparse.Namespace, stem: Path, variant: str | None = N
                "--note", note, "--out", stem]
     if variant:
         command += ["--variant", variant] + [part for pair in args.config for part in ("--config", pair)]
-    return command
+    return command + budget(args)
+
+
+def budget(args: argparse.Namespace) -> list:
+    """`--llm-budget-usd` for make_request.py when the run sets one (a league's lower spend cap, say)."""
+    return [] if args.llm_budget_usd is None else ["--llm-budget-usd", str(args.llm_budget_usd)]
 
 
 def alone_request(args: argparse.Namespace, arm: str, ref: str, stem: Path) -> list:
     """The `make_request.py field` command for one arm of the candidate-alone check."""
     return [sys.executable, LAB / "tools" / "make_request.py", "field", "--a", ref,
             "--field-set", args.field_set, "-n", args.episodes, "--balanced", "--no-maps",
-            "--note", f"{args.record} candidate-alone check, arm {arm}", "--out", stem]
+            "--note", f"{args.record} candidate-alone check, arm {arm}", "--out", stem] + budget(args)
 
 
 def health_request(args: argparse.Namespace, body: Path) -> list:
     """The `make_request.py field` command for the one short health game of `--health`."""
     return [sys.executable, LAB / "tools" / "make_request.py", "field", "--a", args.a,
             "--field-set", args.health, "-n", args.health_games, "--variant", "classic-press-short", "--no-maps",
-            "--note", f"{args.record} health game", "--out", body]
+            "--note", f"{args.record} health game", "--out", body] + budget(args)
 
 
 def estimate(created: dict) -> float:
@@ -640,6 +645,9 @@ def main(argv=None) -> None:
     ap.add_argument("--variant", metavar="VARIANT",
                     help="screen stage: play the paired design on this variant (classic-press-short, about 25 "
                          "minutes) and read health and behaviour only; no score verdict")
+    ap.add_argument("--llm-budget-usd", type=float, metavar="USD",
+                    help="per-game LLM cap split over the seven seats, for every request this run creates "
+                         "(default: make_request.py's, $14 for press). 3.5 plays every seat at a $0.50 league cap")
     ap.add_argument("--config", action="append", default=[], metavar="KEY=VALUE",
                     help="with --variant only: a game_config_overrides setting for the screen games, "
                          "e.g. end_year=1903 or phase_minutes=2 for a shorter game")

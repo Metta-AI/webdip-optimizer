@@ -57,5 +57,32 @@
     "policy_ref": "<policy version id from tools/field.py>"
    }
   ]
+ },
+ "league-top5-2026-10-14": {
+  "league": "press",
+  "variant": "classic-press",
+  "defined": "2026-10-14 23:55Z: tools/field.py press over rounds 34-43; the five entrant versions seated in round 43 with the highest league mean score, excluding scott-pidip",
+  "seats": [
+   {
+    "label": "co-gas-webdiplomacy-relh:v17",
+    "policy_ref": "843aa23d-6f4d-401a-9d80-ebfd0411e4c9"
+   },
+   {
+    "label": "strategist:v5",
+    "policy_ref": "a9a1d63f-3769-4736-b023-f0f86b1e3c8d"
+   },
+   {
+    "label": "webdiplomacy-player:v4",
+    "policy_ref": "70288c74-553f-4b84-a9d1-915c6ff43ffc"
+   },
+   {
+    "label": "comax-webdip:v4",
+    "policy_ref": "298126bc-b892-4fc3-823c-9255ccc50dea"
+   },
+   {
+    "label": "daf-diplomacy:v1",
+    "policy_ref": "b5b3620d-d6b3-49d4-9404-28d89acdd19d"
+   }
+  ]
  }
 }

@@ -151,12 +151,16 @@ class RunAbRecord(unittest.TestCase):
         self.assertEqual(run_ab.paired_ids(text), ["xreq_full"])  # a paired --resume leaves the screen out
 
         args = argparse.Namespace(record="2026-01-01-x", a="p:v2", b="p:v1", field_set="set-5", episodes=1,
-                                  config=["end_year=1903"])
+                                  config=["end_year=1903"], llm_budget_usd=None)
         full = [str(part) for part in run_ab.paired_request(args, Path("x.json"))]
         short = [str(part) for part in run_ab.paired_request(args, Path("x-screen.json"), "classic-press-short")]
         self.assertNotIn("--variant", full)
+        self.assertNotIn("--llm-budget-usd", full)
         self.assertEqual(short[-4:], ["--variant", "classic-press-short", "--config", "end_year=1903"])
         self.assertIn("2026-01-01-x screen stage on classic-press-short", short)
+        args.llm_budget_usd = 3.5  # a run at a $0.50 league cap
+        self.assertEqual([str(part) for part in run_ab.paired_request(args, Path("x.json"))][-2:],
+                         ["--llm-budget-usd", "3.5"])
 
     def test_evals_round_trip_and_status(self):
         self.assertEqual(run_ab.evals_in(self.FILLED), [])
