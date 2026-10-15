@@ -104,8 +104,9 @@ plan in 2, 0 rejected orders in 14 decision lines, 0 exceptions. No seat there m
 path is covered by `tests/test_talker.py` (the roster records PIE and TYS from an accepted DMZ), not by the game.
 
 Risks: the guard now also runs when Sol forbids provinces and pins nothing of ours, so more commits run its second
-search and values call; v15's timing change is what keeps those inside the wake's deadline, so wake timeouts are in
-the rule.
+search and values call (in v14's 1,203 commits the guard ran in 942; 132 more had forbids and no pin of ours, so at
+most 11% more guard runs); v15's timing change is what keeps those inside the wake's deadline, so wake timeouts are
+in the rule.
 
 ## Result
 
