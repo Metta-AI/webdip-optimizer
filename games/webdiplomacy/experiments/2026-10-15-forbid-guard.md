@@ -110,8 +110,12 @@ in the rule.
 
 ## Result
 
-Not yet run. Scott chose this as the next paired test (card, 18:24Z on 2026-10-15); it waits for him to
-raise the OpenRouter key's limit ($16.76 left at 18:29Z). The baseline v15 has been the league entry since 18:27Z.
+Scott chose this as the next paired test (card, 18:24Z on 2026-10-15); the paired run waits for him to raise the
+OpenRouter key's limit ($15.85 left at 20:46Z). The baseline v15 has been the league entry since 18:27Z.
+
+Health games: `xreq_ffc01694-223b-47a5-bc81-fc912bfd59c0`, launched 20:47Z (3 classic-press-short games, v17 beside
+v15, field league-top5-2026-10-14; 3.5 credits by the platform's estimate at create; Coworld 0.7.15). Launched
+before the paired run because league spend fell to about $0.4 an hour once rounds shrank to 6 games.
 
 ## Verdict
 
