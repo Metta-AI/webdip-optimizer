@@ -17,4 +17,9 @@ Two preferences every optimizer records during onboarding:
 
 ---
 
-*(empty — recorded during onboarding and as stated)*
+## Autonomy dial
+
+- Scott, 2026-10-15 22:57Z, project thread "Diplomacy bot next steps": "do whatever you think makes the most
+  sense. goal is just to get the best possible bot submitted pls so I trust your opinions"
+
+League entry still follows the repository rule: Scott's explicit go-ahead naming the version, every time.
