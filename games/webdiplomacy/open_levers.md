@@ -31,3 +31,13 @@ Format (the block below is an example of the fields, not an entry):
 ```
 
 ---
+
+## Luna for press wakes, with the spend squeeze, at a $0.50 cap        tested 2026-10-15
+**Mechanism:** scott-pidip v6: press wakes on `openai/gpt-6-luna`, phase starts on Sol, governor budget read
+from the sidecar's `GET /spend` (the "Spend per game" thread's branch at 658d18b).
+**Read:** v6 minus v5 -0.052 a game, SE 0.043, z -1.2, 47 clean pairs against `league-top5-2026-10-14`,
+every seat capped at $0.50. The mechanism fired: v5 was refused from turn 7 in all 49 seats; v6 spent $0.24.
+Record `experiments/2026-10-14-v6-luna-press-at-050.md`.
+**Could see:** about 0.09 at z = 2.
+**A next test needs:** a version that spends near the cap with Sol's commit detail (v6 fixed orders in 59% of
+phases against v5's 89%), or a reason to expect late-game press to matter more than this field shows.
