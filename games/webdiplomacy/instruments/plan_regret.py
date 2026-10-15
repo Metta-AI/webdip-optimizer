@@ -104,6 +104,7 @@ def run(server, job):
     province = {i: ABBREVIATION[territories[t["coastParentID"]]["name"]] for i, t in territories.items()}
     forbidden = set(policy.get("forbid_moves_into") or []) if policy else set()
     unit_terrs = {o["terrID"] for o in job["ours"]}
+    hit = sorted({province[o["toTerrID"]] for o in candidates[top] if o["type"] == "Move"} & forbidden)
     return {"episode": job["episode"], "slot": job["slot"], "turn": job["turn"], "year": 1901 + job["turn"] // 2,
             "units": len(job["ours"]), "candidates": len(candidates),
             "played_in_samples": sig(job["ours"]) in {sig([webdip(o) for o in p]) for p in samples},
@@ -113,8 +114,7 @@ def run(server, job):
             "pins": len(policy.get("require_orders") or []) if policy else 0,
             "forbids": len(policy.get("forbid_moves_into") or []) if policy else 0,
             "allies": sum(1 for s in (policy.get("stances") or {}).values() if s == "ally") if policy else 0,
-            "forbids_bind": any(o["type"] == "Move" and province[o["toTerrID"]] in forbidden
-                                for o in candidates[top]),
+            "forbids_bind": bool(hit), "forbids_hit": hit,
             "unit_terrs": len(unit_terrs)}
 
 

@@ -2,17 +2,19 @@
 id: 2026-10-15-forbid-guard
 policy: scott-pidip
 baseline: scott-pidip:v15
-candidate: n/a (image pidip:hybrid-forbidguard, local merge dc5c8a0 = v15 plus policies commit 9dc114b, FORBID_GUARD=1; built, not uploaded)
+candidate: n/a (image pidip:hybrid-dmzguard, local merge c255277 = v15 plus policies commits 9dc114b and e0f964f, FORBID_GUARD=1; built, not uploaded)
 status: proposed
 hypothesis: >
-  The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids, because in v14's hosted games
+  The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's hosted games
   Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
   Diplodocus alone rates best in 250 of them, where our played orders were worth 0.010 +/- 0.002 less after the
   phase (Diplodocus's value against the others' actual orders) than Diplodocus's plan; where the forbids did not
   block it, +0.003 +/- 0.003. v15's guard frees only our pinned orders: its free plan keeps every forbidden
-  province. FORBID_GUARD (policies commit 9dc114b, castlereagh/press/service.py guarded_search) plans the free side
-  without forbid_moves_into too, plays it when Diplodocus rates it more than 0.01 higher on fresh replies, and tells
-  Sol in the search report which forbids it dropped.
+  province. FORBID_GUARD (policies commits 9dc114b and e0f964f, castlereagh/press/service.py guarded_search) plans
+  the free side without the forbidden provinces that no accepted DAIDE DMZ covers, plays it when Diplodocus rates it
+  more than 0.01 higher on fresh replies, and tells Sol in the search report which forbids it dropped. Provinces in
+  an accepted DMZ stay forbidden: in 120 of the 250 blocking phases Diplodocus's plan entered only forbids with no
+  agreed DMZ (-0.010 +/- 0.003 a phase), in 96 only agreed DMZ provinces (-0.007 +/- 0.003).
 decision_rule: >
   Scott's release bar against the current candidate: the forbid guard is put to Scott for entry iff it minus v15 is
   at least +0.03 a game with t at least 1 over 50 or more clean paired games (paired.py), with 0 rejected orders,
@@ -28,7 +30,7 @@ cost: >
 artifacts: []
 ---
 
-# Forbid guard: Diplodocus may overrule Sol's forbidden provinces
+# Forbid guard: Diplodocus may overrule the provinces Sol forbids on its own
 
 ## Context
 
@@ -52,9 +54,25 @@ Diplodocus's plan was worth 0.015 +/- 0.003 more ex post; in the other 88, 0.001
 pin loss at -0.0047 a phase with 3 or more pins and v14's at -0.0017, and v14 then gained +0.132 a game, so a
 per-phase value gap is a lower bound on the game effect, not an estimate of it.
 
-**What these numbers cannot see.** A forbid is often half of a demilitarized-zone deal. Ex post is one draw of the
-others' play in that phase; it does not see a neighbour retaliating later for a broken promise. Only the hosted
+**What these numbers cannot see.** A forbid is often half of a demilitarized-zone (DMZ) deal. Ex post is one draw of
+the others' play in that phase; it does not see a neighbour retaliating later for a broken promise. Only the hosted
 paired games can.
+
+**Which forbids cost the value** (a rerun with the plan's forbidden provinces recorded, 2026-10-15 16:00Z: 247 of
+382 phases block Diplodocus's plan, -0.0094 +/- 0.0023, the first run's number within noise). An accepted DMZ here
+is any DAIDE `YES (PRP ...)` with a DMZ clause, either way, in our seat's press up to that phase; 54% of the
+forbidden provinces were in one. Deals made in plain English are not seen, so "not agreed" is an upper bound.
+
+| Diplodocus's plan enters | Phases | Ex post | SE | Guard would fire (ex ante gap > 0.01) |
+|---|---|---|---|---|
+| only forbids with no agreed DMZ | 120 | -0.0104 | 0.0032 | 80 |
+| only agreed DMZ provinces | 96 | -0.0066 | 0.0034 | 52 |
+| both | 31 | -0.0141 | 0.0079 | 25 |
+| no forbidden province | 135 | +0.0036 | 0.0022 | 15 |
+
+So the candidate drops only the forbids no accepted DMZ covers: it frees the 120 phases (and part of the 31) at no
+broken promise. Dropping agreed DMZs too (9dc114b alone) would also free the 96, at the cost the value cannot see;
+that variant is one line away if this one confirms.
 
 ## Predictions — pre-registered
 
@@ -69,14 +87,17 @@ paired games can.
 One short health game (the candidate beside v15), then `run_ab.py` paired, 14 bodies x 4, against
 `league-top5-2026-10-14`, as v14's test. Same router endpoint and model as v15.
 
-Local wiring check before upload ($0, no language model): `tools/meta/fake_llm.py --forbid
+Local wiring checks before upload ($0, no language model). First, 9dc114b alone: `tools/meta/fake_llm.py --forbid
 BEL,HOL,DEN,SWE,NWY,RUM,SER,GRE,BUL,SPA,POR,TUN` behind the local sidecar, one seat of the candidate against six
 search seats, local Diplodocus server, `end_year=1902` (`/home/user/dipwork/rankpress/forbidguard`, 15:00Z on
 2026-10-15). The guard judged all 4 commits (`forbids: 12` in each `pin_guard` line) and played the free plan in
 one, Autumn 1902 (free value 0.0960 against 0.0847 guarded): England ordered F NTH - DEN and F MAO - SPA/SC, both
 forbidden, and the replay shows them played. The commit's search report told the agent which pins and forbids it
 dropped and why. 0 rejected orders in the 3 decision lines (the last phase's orders read from the replay; the game
-ended before its decision line), 0 exceptions, wakes up to 10.4 s.
+ended before its decision line), 0 exceptions, wakes up to 10.4 s. Then the candidate image, same setup with
+`end_year=1903` (`/home/user/dipwork/rankpress/dmzguard`, 16:20Z): the guard judged 6 commits and played the free
+plan in 2, 0 rejected orders in 14 decision lines, 0 exceptions. No seat there makes DAIDE deals, so the agreed-DMZ
+path is covered by `tests/test_talker.py` (the roster records PIE and TYS from an accepted DMZ), not by the game.
 
 Risks: the guard now also runs when Sol forbids provinces and pins nothing of ours, so more commits run its second
 search and values call; v15's timing change is what keeps those inside the wake's deadline, so wake timeouts are in
