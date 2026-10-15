@@ -1,8 +1,8 @@
 ---
-id: 2026-10-15-v15-press-aware-values
+id: 2026-10-15-v16-press-aware-values
 policy: scott-pidip
-baseline: scott-pidip:v14 if its record confirms, else scott-pidip:v13
-candidate: scott-pidip:v15 (built on the baseline with META_RANK_PRESS=1 as its one change)
+baseline: scott-pidip:v15 if its health record confirms, else scott-pidip:v14
+candidate: scott-pidip:v16 (built on the baseline with META_RANK_PRESS=1 as its one change)
 status: planned
 hypothesis: >
   The hybrid scores more when Diplodocus's value network ranks our plans against replies conditioned on the press
@@ -14,7 +14,7 @@ hypothesis: >
   realised rate. Policies commit 312bdfb: META_RANK_PRESS sends this phase's Diplodocus samples with the policy
   applied (opponent_model.apply_press) as the values stage's `opponents`.
 decision_rule: >
-  Scott's release bar against the baseline: v15 is put to Scott for entry iff v15 minus baseline is at least +0.03
+  Scott's release bar against the baseline: v16 is put to Scott for entry iff v16 minus baseline is at least +0.03
   a game with t at least 1 over 50 or more clean paired games (paired.py), with 0 rejected orders, failed calls no
   higher than the baseline's in the same games, spend at most $0.50 a seat by its governor's count, and a clean
   health game. Entry needs Scott's explicit go-ahead naming the version.
@@ -25,7 +25,7 @@ cost: >
 artifacts: []
 ---
 
-# v15: Diplodocus ranks plans against the replies Sol's deals predict
+# v16: Diplodocus ranks plans against the replies Sol's deals predict
 
 ## Context
 
