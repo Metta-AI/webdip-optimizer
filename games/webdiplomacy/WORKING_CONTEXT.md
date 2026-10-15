@@ -31,8 +31,8 @@ health-only change, with clean health games; enter only with his go-ahead naming
   written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
 - Scott chose v17 (18:24Z) for the next paired test once the key has room: health request first, then
   `run_ab.py --record 2026-10-15-forbid-guard --a scott-pidip:v17 --b scott-pidip:v15 --field-set
-  league-top5-2026-10-14 -n 4`. Key: limit still $320, $16.76 left at 18:29Z (told Scott); the league entry
-  averaged about $1.6 an hour from 12:41Z.
+  league-top5-2026-10-14 -n 4`. Key: limit still $320, $15.85 left at 20:46Z (told Scott). The league entry drew
+  about $1.6 an hour from 12:41Z to 18:29Z, then about $0.4 an hour once rounds shrank to 6 games.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
