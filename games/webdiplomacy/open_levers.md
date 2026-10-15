@@ -65,3 +65,14 @@ orders); 32 replies: -0.0004 ± 0.0007. Ranking itself pays: the 16-reply pick b
 **Could see:** about 0.002 a phase at z 2.
 **A next test needs:** a reason to expect value noise costs games (it did not show here), and room on the
 endpoint for 3.4 times the values time; not worth hosted games on this read.
+
+## More of Diplodocus's sampled plans as candidates (META_SEEDS 32 to 64)            tested 2026-10-15
+**Mechanism:** the seat ranks our power's distinct plans among META_SEEDS sampled joint actions
+(castlereagh/meta.py); more samples give more candidates.
+**Read:** offline only, no hosted games (`instruments/seed_count.py` on 300 movement phases of v14's paired run,
+local Diplodocus server). 32 samples gave 13.4 distinct plans, 64 gave 19.0; ranked on one 16-reply values call,
+the pick changed in 47 of 300 phases and was worth +0.0006 ± 0.0005 a phase ex post (value after the phase
+against the others' actual orders). The samples call doubles and the values call grows about 40%.
+**Could see:** about 0.001 a phase at z 2.
+**A next test needs:** a cheaper endpoint, or a reason the extra plans matter more than this read shows; not worth
+hosted games on it.
