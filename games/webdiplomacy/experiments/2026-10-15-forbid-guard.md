@@ -5,8 +5,8 @@ baseline: scott-pidip:v15
 candidate: n/a (image pidip:hybrid-dmzguard, local merge c255277 = v15 plus policies commits 9dc114b and e0f964f, FORBID_GUARD=1; built, not uploaded)
 status: proposed
 hypothesis: >
-  The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's hosted games
-  Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
+  The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's
+  hosted games Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
   Diplodocus alone rates best in 250 of them, where our played orders were worth 0.010 +/- 0.002 less after the
   phase (Diplodocus's value against the others' actual orders) than Diplodocus's plan; where the forbids did not
   block it, +0.003 +/- 0.003. v15's guard frees only our pinned orders: its free plan keeps every forbidden
@@ -95,7 +95,7 @@ one, Autumn 1902 (free value 0.0960 against 0.0847 guarded): England ordered F N
 forbidden, and the replay shows them played. The commit's search report told the agent which pins and forbids it
 dropped and why. 0 rejected orders in the 3 decision lines (the last phase's orders read from the replay; the game
 ended before its decision line), 0 exceptions, wakes up to 10.4 s. Then the candidate image, same setup with
-`end_year=1903` (`/home/user/dipwork/rankpress/dmzguard`, 16:20Z): the guard judged 6 commits and played the free
+`end_year=1903` (`/home/user/dipwork/rankpress/dmzguard`, about 16:10Z): the guard judged 6 commits and played the free
 plan in 2, 0 rejected orders in 14 decision lines, 0 exceptions. No seat there makes DAIDE deals, so the agreed-DMZ
 path is covered by `tests/test_talker.py` (the roster records PIE and TYS from an accepted DMZ), not by the game.
 
