@@ -20,7 +20,9 @@ health-only change, with clean health games; enter only with his go-ahead naming
   0.116, 5 centres, 0 rejected, 0 of 72 calls failed. Rounds now hold 6 games (12 before round 56); round 56 did
   not seat us. Round 58 (fetched 21:30Z, v15 in 3, no taint): Turkey 0.757 (16 centres, 1st of 7), Russia 0.106
   (4th), Germany 0.020 (6th); 0 rejected, 0 exceptions, 0 of 238 calls failed, 4 HTTP errors, $1.14 of model
-  calls. So far 4 clean league games: mean 0.250. Fetch the next rounds with `fetch_league.py press --policy
+  calls. Round 59 (fetched 22:41Z, v15 in 3, no taint): 1st in all three, solos as France and Germany (20 centres,
+  1.0 each) and Italy 0.585 (12 centres); 0 rejected, 0 exceptions, 2 of 228 calls failed, 5 HTTP errors. So far 7
+  clean league games: mean 0.512 (v7's league mean was 0.506). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
