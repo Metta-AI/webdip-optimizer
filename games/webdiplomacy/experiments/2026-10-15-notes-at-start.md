@@ -33,6 +33,11 @@ of prompt tokens are cached already. Of Sol's output characters, `notes` is 55% 
 characters each), `commit_orders` 14%, `send_press` 7%, `search` 7%. Each note rewrites the single "strategy"
 note with the whole state; the press task's text asks for it ("Note anything you will want at a later wake").
 
+Cache writes are not a lever (same seats, 757 wakes, 2.5 calls a wake): every call writes its new suffix and the
+next call in the wake reads it. 52% of the written tokens are each wake's briefing on its first call, 30% the
+middle calls', and 27% the last call's (single-call wakes count in both), which nothing reads again. Not caching
+the last call would bill those tokens at $2.0 instead of $2.5 a million: $0.009 a seat, 2% of spend.
+
 ## Predictions — pre-registered
 
 - **If TRUE we expect:** `notes` calls on press wakes near 0, spend a seat down 8 to 12%, paired difference
