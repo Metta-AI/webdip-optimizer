@@ -20,6 +20,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
   room on the OpenRouter key in the `diplodocus-router` Modal secret ($26 left at 12:41Z; the league entry uses
   about $2.5 an hour; a 56-game paired run about $44).
+- Two candidates built on v15 and not uploaded, each waiting for key room and Scott's rule or go-ahead: notes at
+  phase starts only (spend about -11%, `experiments/2026-10-15-notes-at-start.md`, image `pidip:hybrid-notes`)
+  and the forbid guard (Diplodocus may overrule Sol's forbidden provinces, `experiments/2026-10-15-forbid-guard.md`,
+  image `pidip:hybrid-forbidguard`, local wiring clean).
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
