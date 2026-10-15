@@ -27,7 +27,7 @@ health-only change, with clean health games; enter only with his go-ahead naming
   -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). Health requests are
   written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
 - Card to Scott at 16:50Z: which version gets the next paired test once the key has room (v17 recommended, v18,
-  v16, or hold). Key: $18.64 left at 16:48Z; the league entry averaged $1.8 an hour from 12:41Z.
+  v16, or hold). Key: $18.33 left at 17:26Z; the league entry averaged $1.65 an hour from 12:41Z.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
@@ -37,7 +37,7 @@ None.
 
 ## Load-bearing facts
 
-- v7 in the league, rounds 47 to 53 (to 15:11Z): 0.516 a game over 28 clean games, +0.40 over par, solo 18%
+- v7 in the league, rounds 47 to 55 (to 17:14Z): 0.506 a game over 38 clean games, +0.39 ± 0.05 over par, solo 16%
   (`wd.py metrics .runtime/artifacts/league-press --policy scott-pidip:v7`). Its 6 exception games are a rival's
   DAIDE with an unclosed bracket crashing the reply parser at turn 0 (fixed in 6968d05, in v15); the seat plays on.
   Its 22 failed Diplodocus calls all fell between 06:33 and 07:57Z, the sidecar's 502 window; 0 in 375 movement
