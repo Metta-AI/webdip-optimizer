@@ -26,6 +26,8 @@ health-only change, with clean health games; enter only with his go-ahead naming
   `experiments/2026-10-15-forbid-guard.md`, local wiring clean), and v18, notes at phase starts only (spend about
   -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). Health requests are
   written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
+- Card to Scott at 16:50Z: which version gets the next paired test once the key has room (v17 recommended, v18,
+  v16, or hold). Key: $18.64 left at 16:48Z; the league entry averaged $1.8 an hour from 12:41Z.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
