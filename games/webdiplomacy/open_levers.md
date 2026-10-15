@@ -41,3 +41,14 @@ Record `experiments/2026-10-14-v6-luna-press-at-050.md`.
 **Could see:** about 0.09 at z = 2.
 **A next test needs:** a version that spends near the cap with Sol's commit detail (v6 fixed orders in 59% of
 phases against v5's 89%), or a reason to expect late-game press to matter more than this field shows.
+
+## v9's lighter press on the Diplodocus hybrid                       tested 2026-10-15
+**Mechanism:** the hybrid with v9's press (no call or wake limits, update briefings, keep-starts governor with the
+phase-start cost curve, `GOVERNOR_RESERVE_USD=0.02`) instead of v7's squeeze (call limit 4, 3 wakes, 20 to 40 s
+debounce, notes, deals and history sections).
+**Measured:** v11 minus v10 -0.001 ± 0.051 a game, z -0.01, n = 67 pairs against `league-top5-2026-10-14`;
+v11 spent $0.477 a seat against $0.393 and went over $0.50 in 15 of 70 seats
+(`2026-10-15-v11-hybrid-lighter-press`).
+**A second try must add:** a reason the extra press spend changes orders when Diplodocus already ranks them; and a
+governor that holds $0.50 on a route the platform does not cap.
+

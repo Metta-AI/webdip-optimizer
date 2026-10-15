@@ -3,7 +3,7 @@ id: 2026-10-15-v11-hybrid-lighter-press
 policy: scott-pidip
 baseline: scott-pidip:v10
 candidate: scott-pidip:v11
-status: running
+status: inconclusive
 hypothesis: >
   The hybrid scores more with v9's lighter press than with v7's squeeze because v7 left about $0.11 of its $0.50
   a seat unspent (mean $0.388, max $0.459) under its call and wake limits (PRESS_REQUEST_LIMIT=4,
@@ -44,4 +44,19 @@ keep-starts governor, whose health v8 and v9 showed hosted, so health is read fr
 
 ## Result
 
+Read 08:06Z on 2026-10-15, all 14 batches terminal (`paired.py`, `wd.py metrics`, `wd.py costs`).
+
+- **Paired:** v11 minus v10 **-0.001 ± 0.051 a game, z -0.01, n = 67 clean pairs** (paired SD 0.414; 2 games
+  dropped, one wake timeout logged as an exception in each arm).
+- **Alone:** v11 0.298 a game (+0.182 ± 0.025 over par), 8.31 centres; v10 0.304 (+0.187 ± 0.031), 8.40 centres.
+- **By power against par:** v11 below v10 at five powers (England -0.10, z -1.0), above at Russia (+0.11) and
+  Turkey (+0.07); none at |z| over 1.2.
+- **Telemetry:** 0 rejected orders either arm. Failed calls v11 94 of 5,823 (1.6%), v10 266 of 5,684 (4.7%).
+- **Spend:** v11 $0.477 a seat (max $0.528; 15 of 70 seats over $0.50 by its own count), v10 $0.393 (max
+  $0.447, none over). The keep-starts governor's $0.02 reserve did not hold the cap on this route, where the
+  platform does not refuse calls.
+
 ## Verdict
+
+**Inconclusive**, and not entered: no difference (z -0.01) over 67 pairs, while v11 spent $0.08 a seat more and
+went over the $0.50 cap in 15 seats. The squeeze press v7 and v10 use stays. Entered in `open_levers.md`.
