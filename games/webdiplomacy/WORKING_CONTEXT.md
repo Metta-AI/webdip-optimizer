@@ -16,7 +16,8 @@ health-only change, with clean health games; enter only with his go-ahead naming
 - v15 (v14 plus the pin guard bounded by the wake's time left) is the entry candidate: v14 beat v13 by +0.13 over
   56 pairs (`experiments/2026-10-15-v14-value-pin-guard.md`), v15's health games are clean
   (`experiments/2026-10-15-v15-guard-timing.md`). Card to Scott at 12:41Z.
-- v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. It needs the endpoint
+- v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
+  pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
   room on the OpenRouter key in the `diplodocus-router` Modal secret ($26 left at 12:41Z; the league entry uses
   about $2.5 an hour; a 56-game paired run about $44).

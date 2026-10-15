@@ -67,3 +67,21 @@ server (32 joint actions, the seat's settings), each other power's samples again
 Today's ranking replies have allies attack four times as often as they do; with trust 0.8, apply_press brings
 the 0.207 to about 0.04. The samples give the order a unit played 0.32 of their weight on average, alike for
 every field policy (0.30 to 0.34).
+
+Offline check of the pick (`instruments/press_rank.py`, 16:46Z): 300 movement phases of v14's paired run whose
+committed policy named an ally (295 with two or more plans), local server. Our distinct plans from 32 samples,
+ranked on samples 0-15 of the others as sampled and again with the seat's apply_press step for allies (promised
+orders not applied), then scored against what the others actually played:
+
+| Phases | n | Picks differ | Ex post, press-ranked minus raw-ranked | SE |
+|---|---|---|---|---|
+| all | 295 | 22 | -0.0006 | 0.0005 |
+| no ally attacked us | 275 | 16 | -0.0006 | 0.0005 |
+| an ally attacked us | 20 | 6 | +0.0004 | 0.0010 |
+
+Press conditioning turned 2.1 ally orders a phase (of 16 replies) into holds, none at all in 212 of 295 phases,
+and the value network's pick moved in 22. Where it moved, the press-ranked plan did no better against the real
+orders (-0.002 +/- 0.002 over the 83 phases where it fired). Allies attacked us in 6.8% of these phases. So the
+mechanism is real (Diplodocus over-predicts ally attacks) but on this read it barely changes our orders. This is
+an offline proxy, not a verdict; it is a reason to test v17 (`2026-10-15-forbid-guard`) before this one when the
+key allows one paired run.
