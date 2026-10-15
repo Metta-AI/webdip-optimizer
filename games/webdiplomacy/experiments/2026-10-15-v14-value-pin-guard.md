@@ -3,7 +3,7 @@ id: 2026-10-15-v14-value-pin-guard
 policy: scott-pidip
 baseline: scott-pidip:v13
 candidate: scott-pidip:v14
-status: running
+status: confirmed
 hypothesis: >
   The hybrid scores more when Diplodocus may override the orders Sol writes for its own units, because Sol pins
   most of them: in v12's 848 hosted movement decisions Sol's committed `require_orders` covered 54% of our units,
@@ -74,3 +74,36 @@ seen since v7's health game). 0 values calls failed.
 Paired run launched 10:48Z: 14 batches, `-n 4` (56 games; platform estimate 616.5 credits). Four a body, not
 five, because the OpenRouter key had $76 left and v7's league games draw on it; `run_ab.py --add-set` adds 14
 more if the clean pairs fall short of 50.
+
+## Result
+
+Read 12:05Z on 2026-10-15, all 56 games finished (none failed on the platform). `paired.py`, `wd.py metrics`,
+`wd.py costs`, and the seat logs' `press_commit` and `wake` lines.
+
+- **Paired, every game:** v14 minus v13 **+0.132 ± 0.066 a game, z 1.99, n = 56** (paired SD 0.494;
+  `--keep-tainted`). v14 in the lower slot in 14 of 33 clean games.
+- **Paired, the default read:** +0.191 ± 0.087, z 2.19, n = 33. It drops 23 games for v14's "exception" taint,
+  which here is v14's own wake timeouts (below), not an infrastructure failure, so the every-game read is the one
+  the rule uses.
+- **Alone:** v14 0.456 a game in its 33 clean games (+0.359 over par), 11.0 final centres, solo 15%; v13 0.286
+  (+0.167 ± 0.031, n = 56), 8.38 centres, solo 1.8%.
+- **By power, same power against par (8 a cell):** v14 ahead at France +0.30 (z 2.6), Italy +0.31 (z 2.5), Russia
+  +0.21, Turkey +0.21, Germany +0.03; behind at Austria -0.09 and England -0.04 (|z| < 0.7).
+- **Mechanism:** the guard judged 942 commits that pinned our own play and played the free plan in 263 (28%);
+  0 values calls failed.
+- **Telemetry:** 0 rejected orders either arm. Failed model calls v14 1 of 4,374, v13 2 of 4,585 (the platform's
+  502s were gone this run). Spend v14 $0.359 a seat (max $0.411), v13 $0.365 (max $0.421), by the governors'
+  count.
+- **Wake timeouts (v14 only):** 26 of 1,680 wakes ended with `TimeoutError: pidip agent sent no 'done' ... by its
+  deadline` (in 23 of 56 games; v13 0 of 1,845). The guard's commit runs two searches and three values calls,
+  which the wake's deadline does not budget for; the bridge restarts the agent and the seat plays on.
+
+## Verdict
+
+**Confirmed** against Scott's bar: +0.132 a game is 4.4 times the +0.03 bar at t 1.99 over 56 pairs, with 0
+rejected orders, failed calls below v13's, spend under $0.50 a seat and a clean health game. The prediction
+held: the guard fired in 28% of commits (predicted at least a fifth). Entry is put to Scott (needs his go-ahead
+naming v14).
+
+Follow-up: budget the guard's extra search and values calls inside the wake deadline, so the 1.5% of wakes that
+time out finish.
