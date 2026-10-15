@@ -3,7 +3,7 @@ id: 2026-10-15-v16-press-aware-values
 policy: scott-pidip
 baseline: scott-pidip:v15 if its health record confirms, else scott-pidip:v14
 candidate: scott-pidip:v16 (pidip:hybrid-rankpress2, v15 with META_RANK_PRESS=1 as its one change; uploaded 12:33Z)
-status: planned
+status: proposed
 hypothesis: >
   The hybrid scores more when Diplodocus's value network ranks our plans against replies conditioned on the press
   policy, because today it ranks them against fresh no-press Diplodocus samples, which have every power attack us
