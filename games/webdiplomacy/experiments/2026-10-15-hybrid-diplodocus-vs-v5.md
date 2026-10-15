@@ -3,7 +3,7 @@ id: 2026-10-15-hybrid-diplodocus-vs-v5
 policy: scott-pidip
 baseline: scott-pidip:v5
 candidate: scott-pidip:v7
-status: running
+status: confirmed
 hypothesis: >
   The hybrid outscores v5 at a $0.50 cap because its orders come from Diplodocus (Meta's no-press policy and
   value networks on Scott's Modal endpoint): 32 sampled plans ranked by the value net (META_SEEDS=32,
@@ -75,4 +75,37 @@ OpenRouter key's usage.
 
 ## Result
 
+Read 05:58Z on 2026-10-15, all 14 batches terminal (`paired.py` and `wd.py metrics` on
+`.runtime/artifacts/2026-10-15-hybrid-diplodocus-vs-v5`).
+
+- **Paired:** v7 minus v5 **+0.141 ± 0.045 a game, z 3.13, n = 63 clean pairs** (paired SD 0.358; 5 games
+  dropped for taint; v7 in the lower slot in 31 of 63).
+- **Alone:** v7 0.330 a game (+0.222 ± 0.031 over field par, n = 64), 8.81 final centres, solo in 6.3%;
+  v5 0.185 (+0.053), 6.06 centres.
+- **By power** (each against par at the same power; n 8 to 10 per cell, directional only): v7 ahead of v5 at
+  all seven. Austria +0.14, England +0.13, France +0.18, Germany +0.06, Italy +0.21 (z 2.1), Russia +0.05,
+  Turkey +0.23 (z 2.9).
+- **Taint (v7):** exception 1, rejected_orders 1, pod_deleted 2. The exception (ereq_4549fb4f) is a
+  `ValueError: '(' is never closed` from `daide.parse` in `press/roster.py ingest_replies` (the PRESS_DEALS
+  squeeze code) on a malformed rival message; the main loop caught it and the seat played on. The
+  rejected-orders flag (ereq_795cbef8, turn 11, France, "rejected 8") is false: the `press_commit` 98 s earlier
+  saved 8 with 0 rejected, and the replay adjudicates all 8 French orders (EDI, HOL and MUN taken).
+- **Failed calls (v7):** 442 of 5,627 (7.9%): 351 platform 502 "LLM sidecar internal error" and 80 403s for
+  `typesafe/jev-1.13` (the wake gate's fallback; the BYO route's allowlist is the registered model only). v5 had
+  3,449 of 11,595 failed (29.7%): 588 502s, the rest refusals at the $0.50 cap.
+- **Spend:** v7 $0.388 a seat on average, max $0.459, none over $0.50 (its governor's count of the router's
+  `usage.cost`; the platform metered $0). v5 $0.491 a seat, 63 of 68 seats refused at the cap.
+- **Diplodocus use:** 705 movement phases with samples against 190 sample failures and 64 value failures, so
+  about 1 phase in 5 fell back to pidip's own plan. The value net changed the pick in 711 rankings.
+
 ## Verdict
+
+**Confirmed** on the score: +0.141 a game is 4.7 times the +0.03 bar at z 3.1 over 63 pairs, and v7 led at all
+seven powers. Against the rest of the release bar: the health game was clean; the one rejected-orders flag is a
+false positive by the replay; failed calls are 7.9% against the 1% limit, all platform 502s (which hit v5 too)
+and Jev 403s that only this route produces. Because two conditions are not met to the letter, Scott's
+"Auto-enter" does not cover entry by itself; entry was put to him at 05:59Z.
+
+Follow-ups for a later version: drop the Jev wake gate and fallback on the router route (PRESS_WAKE_GATE=0, or
+route Jev through the endpoint); make `roster.ingest_replies` skip an unparseable DAIDE reply; find why 1 in 5
+Diplodocus sample calls failed (sidecar 502s, 30 s timeouts or endpoint cold starts; `max_containers=8`).
