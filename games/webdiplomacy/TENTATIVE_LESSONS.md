@@ -22,3 +22,6 @@ If a session genuinely produced no lessons, write nothing.
   idea.
 - 2026-10-15: half of Sol's forbidden provinces sit in a DAIDE DMZ it accepted, and partners broke those deals 11
   times against 379 accepted. Split forbids by whether a deal backs them before letting anything overrule them.
+- 2026-10-15: a Diplodocus value gain measured on 16 sampled replies is worth about 0.55 of itself against the
+  others' actual orders, at every size from 0.0025 to 0.05 (`rank_noise.py` pairs, 300 v14 phases). Use the factor
+  to size a value-margin change before testing it.

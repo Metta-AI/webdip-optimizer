@@ -76,3 +76,14 @@ against the others' actual orders). The samples call doubles and the values call
 **Could see:** about 0.001 a phase at z 2.
 **A next test needs:** a cheaper endpoint, or a reason the extra plans matter more than this read shows; not worth
 hosted games on it.
+
+## A lower value margin for the pin guard (PIN_GUARD_VALUE_MARGIN 0.01 to 0.005)      sized 2026-10-15
+**Mechanism:** the guard plays the plan without Sol's pins when Diplodocus rates it more than the margin higher on
+16 fresh replies (castlereagh/press/service.py guarded_search).
+**Read:** offline sizing only, no games. Calibration from `instruments/rank_noise.py`'s 300 phases (every pair of
+candidate plans, 16-reply value gain against the gain against the others' actual orders): a 16-reply gain of 0.005
+to 0.01 is worth +0.003 to +0.004 ex post, about 0.55 of the gain at every size. In v14's 56 seats, 127 guard
+decisions fell in (0.005, 0.01] (2.3 a seat), so the lower margin would add about 0.008 of value a seat; v14's
+dropped pins gave about twice their per-phase value as game score, so roughly +0.015 a game.
+**Could see:** a 56-game paired run sees about 0.08; this is far below it.
+**A next test needs:** to ride with a larger change, or a run of several hundred games; not worth one alone.
