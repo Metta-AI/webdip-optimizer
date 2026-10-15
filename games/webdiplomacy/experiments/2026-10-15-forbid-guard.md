@@ -115,7 +115,11 @@ OpenRouter key's limit ($15.85 left at 20:46Z). The baseline v15 has been the le
 
 Health games: `xreq_ffc01694-223b-47a5-bc81-fc912bfd59c0`, launched 20:47Z (3 classic-press-short games, v17 beside
 v15, field league-top5-2026-10-14; 3.5 credits by the platform's estimate at create; Coworld 0.7.15). Launched
-before the paired run because league spend fell to about $0.4 an hour once rounds shrank to 6 games.
+before the paired run because league spend fell to about $0.4 an hour once rounds shrank to 6 games. Read 21:12Z,
+all 3 completed, no taint: v17 0 rejected orders, 0 exceptions, 0 of 160 model calls failed, 2 wakes at the time
+limit, 4 HTTP 400s on the context poll mid-game; v15 in the same games 0, 0, 0 of 163, 2, and 1. The forbid guard
+dropped forbids in 8 of 53 commits it judged (2 of 3 games), each on a value gain over 0.01. Health passes; Scott
+raised the key's limit to $380 at 20:55Z, so the paired run follows.
 
 ## Verdict
 
