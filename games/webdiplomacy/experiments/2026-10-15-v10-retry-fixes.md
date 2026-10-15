@@ -3,7 +3,7 @@ id: 2026-10-15-v10-retry-fixes
 policy: scott-pidip
 baseline: scott-pidip:v7
 candidate: scott-pidip:v10
-status: running
+status: confirmed
 hypothesis: >
   v10 loses fewer model and Diplodocus calls than v7 because the hosted sidecar's quick 502s clear within 3 s
   and v10 retries 4 s later (pidip/agent.mjs two retries 4 s and 8 s apart; castlereagh/meta.py one retry of a
@@ -36,4 +36,21 @@ Policies repo commit 6968d05 (branch `claude/project-thread-etdwi7`), merged int
 
 ## Result
 
+Read 06:45Z on 2026-10-15, three classic-press-short games, all completed, no taint (`wd.py metrics`).
+
+| | v10 | v7 |
+|---|---|---|
+| Rejected orders, exceptions | 0, 0 | 0, 0 |
+| Model calls failed | 2 of 164 (1.2%), both 502 | 7 of 167 (4.2%) |
+| Jev calls | 0 | 3 gated wakes' worth (403) |
+| Press wakes | 55 ok, 3 call limit, 0 error | 50 ok, 3 call limit, 1 error |
+| Diplodocus samples failed | 0 (1 retried and answered) | 0 |
+| Sol spend, 3 seats | $0.84 | $0.79 |
+
+Scores (v10 0.215, v7 0.324 a game) are 3 games and say nothing.
+
 ## Verdict
+
+**Confirmed** on robustness: fewer failed calls than v7 in the same games, no Jev calls, no rejected orders or
+exceptions. The Diplodocus-failure condition is a tie at 0 in these games; the one 5xx v10 met was retried and
+answered, where v7's code would have lost that phase's samples. Entry put to Scott at 06:46Z.
