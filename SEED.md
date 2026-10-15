@@ -5,7 +5,8 @@
 | **Seed** | optimizer-seed |
 | **Version** | 0.1.0-dev |
 | **Upstream** | https://github.com/Metta-AI/optimizer-seed |
-| **Planted** | *(date stamped when a user clones and onboards)* |
+| **Commit** | cfa0cb335809e67490921d07b89be6d2afcd5833 |
+| **Planted** | 2026-10-15, by coworld-webdiplomacy `optimizer/install.sh` (a copy made from the published template: see the date of this repository's first commit) |
 
 ## The divergence stance
 
