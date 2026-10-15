@@ -3,7 +3,7 @@ id: 2026-10-15-forbid-guard
 policy: scott-pidip
 baseline: scott-pidip:v15
 candidate: scott-pidip:v17
-status: running
+status: inconclusive
 hypothesis: >
   The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's
   hosted games Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
@@ -122,8 +122,37 @@ dropped forbids in 8 of 53 commits it judged (2 of 3 games), each on a value gai
 raised the key's limit to $380 at 20:55Z, so the paired run follows.
 
 Paired run launched 21:14Z: 14 batches, `-n 4` (56 games), ids in `evals`, artifacts in
-`.runtime/artifacts/2026-10-15-forbid-guard`; `run_ab.py` watches and reads when they end.
+`.runtime/artifacts/2026-10-15-forbid-guard`.
+
+Read 22:10Z on 2026-10-15, all 56 games finished (none failed on the platform, no deleted pods). `paired.py`,
+`wd.py metrics` and `seats`, `centre_losses.py --going-in`, and the seat logs' `press_commit` and `wake_error` lines.
+
+- **Paired, every game (the rule's read, as v14's):** v17 minus v15 **+0.055 ± 0.072 a game, t 0.77, n = 56**
+  (paired SD 0.54; `--keep-tainted`). v17 in the lower slot in 28 of 56. The "exception" taint here is both arms'
+  own wake timeouts, caught by the seat, not an infrastructure failure.
+- **Paired, clean games only:** +0.136 ± 0.081, t 1.68, n = 42. It drops the 14 games where either seat had a wake
+  timeout (v17 in 8, v15 in 7, both in 1); v17 trailed by about 0.19 a game in those 14. Dropping games on an
+  outcome both arms produce selects games, so this read is not the rule's.
+- **By power (8 a cell, same power against par):** v17 ahead at Turkey +0.23, France +0.14, Italy +0.14, Austria
+  +0.10, Germany +0.03; behind at England -0.13 and Russia -0.12; every |z| below 1.8.
+- **Mechanism:** the guard judged 1,084 commits, 490 of them with forbids, and dropped forbids in 209 (3.7 a seat;
+  the prediction said 1 to 3).
+- **Allies:** centres lost to a power we called an ally the year before: v17 9 (0.16 a seat), v15 18 (0.32). Centres
+  lost in all, 2.57 a seat against 3.20. The retaliation the FALSE prediction named did not show.
+- **Telemetry:** 0 rejected orders either arm. Failed model calls v17 0 of 4,460, v15 1 of 4,483. Wake timeouts
+  (`TimeoutError: pidip agent sent no 'done' ... by its deadline`; the bridge restarts the agent and the seat plays
+  on) v17 9 of 1,375 wakes in 8 games, v15 7 of 1,474 in 7, all between 21:41Z and 21:59Z (game years 1905 to
+  1908; every game started together, so this is game time as much as clock time). Wakes ended at the time limit:
+  v17 51, v15 58. Spend by the seat logs: v17 $0.387 a seat, v15 $0.386.
 
 ## Verdict
 
-Not yet run.
+**Inconclusive** against Scott's bar. +0.055 a game clears +0.03, but t 0.77 over 56 pairs is below 1; the
+clean-only read (+0.136, t 1.68) has 42 pairs, under 50; and wake timeouts were 9 against v15's 7 (0.65% and 0.47%
+of wakes), where the rule asks for no more than v15's. v15 stays the candidate and the lever goes to
+`open_levers.md`. The prediction's mechanism held (forbids dropped 3.7 times a seat) and the feared cost did not
+show (fewer centres lost to allies), so the lever is not refuted.
+
+At this estimate and SD, t 1 needs about 96 pairs, 40 more games than this run. This rule planned no extension,
+so a second set would be a rule written after seeing data: write it into a new rule first, with the read on the
+full total only.
