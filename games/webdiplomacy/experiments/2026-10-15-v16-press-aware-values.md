@@ -50,3 +50,20 @@ Local wiring check (`/home/user/dipwork/rankpress/wiring2`, one game to 1902 on 
 seat driven by `tools/meta/fake_llm.py`, every power an ally at trust 0.8): 16 values calls carried 16
 press-conditioned replies, the floor's 4 carried none, the plain Diplodocus seat's 4 carried none; 0 rejected
 orders, 0 exceptions, 0 server errors.
+
+League check of the mechanism (`instruments/diplodocus_fit.py`, 12:58Z): the 79 fetched league games with one
+of our seats (v5 and v7), every movement phase's `samples` request rebuilt from the replay and sent to the local
+server (32 joint actions, the seat's settings), each other power's samples against the orders it played.
+"Contact" = one of its units borders one of our units or centres; "attack" = a move or supported move into one.
+
+| Our stance at the phase | Power-phases in contact | Diplodocus samples attack us | Actually attacked us |
+|---|---|---|---|
+| ally | 770 | 0.207 | 0.051 |
+| neutral | 109 | 0.288 | 0.202 |
+| none given | 1,925 | 0.393 | 0.344 |
+| hostile | 972 | 0.492 | 0.542 |
+| all | 3,776 | 0.377 | 0.331 |
+
+Today's ranking replies have allies attack four times as often as they do; with trust 0.8, apply_press brings
+the 0.207 to about 0.04. The samples give the order a unit played 0.32 of their weight on average, alike for
+every field policy (0.30 to 0.34).
