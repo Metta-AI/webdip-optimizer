@@ -2,7 +2,7 @@
 id: 2026-10-15-forbid-guard
 policy: scott-pidip
 baseline: scott-pidip:v15
-candidate: n/a (image pidip:hybrid-dmzguard, local merge c255277 = v15 plus policies commits 9dc114b and e0f964f, FORBID_GUARD=1; built, not uploaded)
+candidate: scott-pidip:v17
 status: proposed
 hypothesis: >
   The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's
@@ -84,6 +84,9 @@ roster logged 379 accepted DMZs and 11 breaches of one (`talker_breach`), so our
   allies in the years after a dropped forbid (the retaliation the value cannot see).
 
 ## Design
+
+v17 (`652c80f2-e4d6-4895-a2cd-52e26364022d`, uploaded 16:15Z) is image `pidip:hybrid-dmzguard`: local merge
+`c255277` = v15 plus policies commits `9dc114b` and `e0f964f`, `FORBID_GUARD=1`, otherwise v15's settings.
 
 One short health game (the candidate beside v15), then `run_ab.py` paired, 14 bodies x 4, against
 `league-top5-2026-10-14`, as v14's test. Same router endpoint and model as v15.

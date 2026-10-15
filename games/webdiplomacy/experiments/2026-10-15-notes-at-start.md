@@ -2,7 +2,7 @@
 id: 2026-10-15-notes-at-start
 policy: scott-pidip
 baseline: scott-pidip:v15
-candidate: n/a (image pidip:hybrid-notes, local merge aa7d544 = v15 plus b72e482, PRESS_NOTES_AT_START=1; built, not uploaded)
+candidate: scott-pidip:v18
 status: proposed
 hypothesis: >
   Sol spends about 11% less a game with no loss of play when its notes are rewritten at phase starts only, because
@@ -46,6 +46,9 @@ the last call would bill those tokens at $2.0 instead of $2.5 a million: $0.009 
   difference below -0.03 (the lost press-wake notes carried what later phases needed).
 
 ## Design
+
+v18 (`ab275a32-7b1a-4812-8957-c31c0063c70c`, uploaded 16:16Z) is image `pidip:hybrid-notes`: local merge `aa7d544`
+= v15 plus policies commit `b72e482`, `PRESS_NOTES_AT_START=1`, otherwise v15's settings.
 
 Not yet run. Paired design as v14's (`run_ab.py`, 14 bodies x 4) against `league-top5-2026-10-14`, after one
 short health game.
