@@ -87,3 +87,19 @@ decisions fell in (0.005, 0.01] (2.3 a seat), so the lower margin would add abou
 dropped pins gave about twice their per-phase value as game score, so roughly +0.015 a game.
 **Could see:** a 56-game paired run sees about 0.08; this is far below it.
 **A next test needs:** to ride with a larger change, or a run of several hundred games; not worth one alone.
+
+## Rank the last movement phase by the exact final score (not Diplodocus's value network)   tested 2026-10-15
+**Mechanism:** Diplodocus's value network predicts our share as if the game went on; after the last movement phase
+(autumn 1908) nothing follows, so the seat could rank plans by the exact score after adjudication (1 for 18 centres,
+else SC² share) against Diplodocus's sampled replies (castlereagh/meta.py rank, with fastadj).
+**Read:** offline only, no hosted games (`instruments/final_rank.py`, local Diplodocus server, 32 samples, 16
+replies; ex post = the final score against the other powers' recorded orders, which matches results.json in 148
+of 151 seats). Among Diplodocus's plans, the exact pick beats the value pick by +0.0075 ± 0.0029 a game (151 seats
+of v7's league games and v13's and v14's paired run; 28 better, 111 same, 12 worse; +0.13 centres), most for large
+powers (+0.015 at 14 or more centres). But the seat plays its press-guarded plan, not the raw pick: ranking that
+plan beside Diplodocus's plans by the exact score, minus what the seat played, is -0.0047 ± 0.0033 for v14 (54
+seats), +0.0009 ± 0.0060 for v7 (43) and +0.0205 ± 0.0083 for v13 (53, no pin guard). Blind replies miss what
+press told the seat about the others' last orders.
+**Could see:** about 0.006 a game at z 2 (v14's seats).
+**A next test needs:** a seat that plays Diplodocus's raw pick in the last phase (no press, as when the key runs
+dry), where the +0.0075 applies; for press seats, replies conditioned on press.
