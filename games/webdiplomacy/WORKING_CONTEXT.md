@@ -32,10 +32,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
   `experiments/2026-10-15-forbid-guard.md`, local wiring clean), and v18, notes at phase starts only (spend about
   -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). v18's health request is
   written (`.runtime/requests/2026-10-15-v18-health.json`: 3 short games beside v15), not launched.
-- Scott chose v17 (18:24Z) for the next paired test. Its 3 health games passed (read 21:12Z, in the record); the
-  paired run launched 21:14Z (56 games, 662.6 credits estimated, ids in the record). If `pgrep -fl run_ab` shows no
-  watcher, resume it with `run_ab.py --record 2026-10-15-forbid-guard --a scott-pidip:v17 --b scott-pidip:v15
-  --field-set league-top5-2026-10-14 -n 4 --resume`. Key: limit raised from $320 to $380 at 20:55Z ($74.81 left) on Scott's ask,
+- v17 (forbid guard) read 22:10Z: **inconclusive**, +0.055 ± 0.072 a game over v15, t 0.77, 56 pairs (record and
+  open_levers.md). v15 stays the candidate. At 22:21Z Scott was asked on a card: extend v17 by 56 games under a
+  rule written first (recommended), test v18 instead, or pause. Either test needs the key raised about $50 first
+  (a broker `openrouter.manage` request Scott approves in Slack). The key's usage counter lags: at 22:11Z it showed
+  only $4 of the run's $43, then climbed about $0.5 a minute. Key: limit raised from $320 to $380 at 20:55Z ($74.81 left) on Scott's ask,
   through the token broker's `openrouter.manage` (one-run grant he approved in Slack; the key is named
   "foundry-artificer" on the company account). The league entry drew about $1.6 an hour from 12:41Z to 18:29Z,
   then about $0.4 an hour once rounds shrank to 6 games.
@@ -44,7 +45,7 @@ health-only change, with clean health games; enter only with his go-ahead naming
 
 ## Watched ids
 
-The 14 paired batches in `experiments/2026-10-15-forbid-guard.md` (`evals`).
+None.
 
 ## Load-bearing facts
 
