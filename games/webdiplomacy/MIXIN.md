@@ -21,7 +21,7 @@ extra capabilities are discoverable.
 | | |
 |---|---|
 | **Upstream mixin** | https://github.com/Metta-AI/coworld-webdiplomacy (`optimizer/mixin/`) |
-| **Commit** | 41d1726f2052e3dc0818d7b3b45c36385e936633 |
+| **Commit** | cc939dc589113f5e108f1814005d6017462af67b |
 | **Installed** | 2026-10-13 |
 
 This lab is a vendored copy and is expected to drift from upstream. That's

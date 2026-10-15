@@ -20,6 +20,84 @@ are under `optimizer/mixin/` here (`ide/` is `optimizer/ide/`).
 Entries start on 2026-10-12. An optimizer made before then has no
 `tools/check_coworld.py`: do the steps of "Changelog and update check" below once.
 
+## 2026-10-15 · Coworld 0.7.15 · results.json names each seat's power; league seating and seat cap
+
+**What changed.** Coworld 0.7.15. `results.json` gains `roles`: seven power names in slot
+order (`England`, `France`, `Italy`, `Germany`, `Austria`, `Turkey`, `Russia`), the same
+assignment as `countries`, and the manifest's `results_schema` requires it. Softmax leagues
+read it to rate how strong each power is alongside the players (OpenSkill role advantages,
+`ranking.role_advantage_sigma`). That setting is not on in either league yet; another
+entry will say when it is. `scores` do not change. Play and what a bot is told during the
+game do not change.
+
+League settings changed too, not the game. The press league seats players with
+`balanced_rotation` again (each entrant plays exactly three games a round, at random among
+the least-played; from 2026-10-13 to 2026-10-15 it used rating-neighbour seating, which
+replayed two fixed tables of seven). Its round interval is 72 minutes, and since 2026-10-14
+each seat's model spend is capped at $0.50 a game (it was $2).
+
+**In your optimizer.**
+
+1. Nothing is required for `roles`; the lab's loader ignores fields it does not use. To
+   read a seat's power by name, use `roles[slot]` on results from 0.7.15 or later.
+2. A press policy that spends more than $0.50 of model calls in a league game has its
+   calls refused for the rest of that game. Check what a seat of your policy spends per
+   game in a hosted batch (`tools/wd.py costs`).
+3. Merge the `roles` row of the `results.json` table and the "Leagues" text of
+   `docs/game.md`, and the league-round line of `docs/platform.md`, from the commit that
+   adds this entry.
+
+## 2026-10-14 · Coworld 0.7.14 · classic-press is back to 3-minute movement phases
+
+**What changed.** Coworld 0.7.14 undoes 0.7.13. `classic-press` and `classic-press-short`
+have `phase_minutes` 3 again, as they did from 0.7.10 to 0.7.12. Retreat and build phases
+and the end years are unchanged. A full press game is again about 45 minutes of play.
+0.7.13 was canonical for about two hours, and no press-league round ran on it. Nothing else
+in the game or the player image changed.
+
+**In your optimizer.**
+
+1. If you changed your policy's timing for 2-minute phases after reading the 0.7.13 entry,
+   change it back. A phase-start agent run again has up to `PRESS_WAKE_SECONDS` (120 s).
+2. If you ran evals on 0.7.13, keep those games apart from others, as the 0.7.13 entry says.
+3. Copy `tools/wake_bench.py` from the commit that adds this entry: its replayed phase is
+   180 seconds again. Merge `docs/game.md`, `docs/platform.md`, the lab manual,
+   `skills/eval-design/SKILL.md` and `tools/run_ab.py` from the same commit; they describe
+   3-minute phases again.
+
+## 2026-10-14 · Coworld 0.7.13 · classic-press has 2-minute movement phases
+
+**What changed.** Coworld 0.7.13. The press league's variant, `classic-press`, and
+`classic-press-short` have `phase_minutes` 2 (they were 3). Retreat and build phases stay
+at 1 minute, and the end years are unchanged (1908 and 1904). At 3 minutes, 171 league games
+played a median 45 minutes; at 2 minutes a full game should take about 29 (computed, not yet
+measured). Nothing else in the game or the player image changed.
+
+Why: in 36 press games on 0.7.12, the last minute carried 22% of private press, and 15% of
+LLM seats' phases ended with orders that changed after 108 s. But replaying those phases
+with the earlier orders moved supply centres by a net +5 across all 36 games, which is not
+distinguishable from zero. The cost of the cut falls on seats whose first agent run of a
+phase is slow: 4.7% of phases got their first LLM orders only after 108 s, and 3.9% got
+none, so the seat played its search-only orders.
+
+**In your optimizer.**
+
+1. A press policy has a third less time in every movement phase. Check anything in your
+   policy that assumes three minutes: wake schedules, the number of model calls a phase,
+   timeouts. The reference policy caps each agent run at the time left before its lock
+   (`PRESS_WAKE_SECONDS` or less), so a phase-start run gets about 107 seconds. If your
+   phase-start run often takes longer, the seat will play its search-only orders more
+   often. Run one health game and read `tools/press_behaviour.py` against an earlier batch.
+2. Do not pool games from before and after this change in one read.
+3. Durations, the LLM part of `cost_usd` and the starting SD in `tools/sizing.py` were
+   measured with longer phases. Re-measure them on your first batch
+   (`tools/batches.py`, `paired.py`'s `sd`).
+4. Merge the variant rows and the notes that name Coworld 0.7.13 in `docs/game.md`,
+   `docs/platform.md`, the lab manual, `skills/eval-design/SKILL.md` and
+   `tools/run_ab.py`.
+5. Copy `tools/wake_bench.py` from the commit that adds this entry: the phase length it
+   gives a replayed decision is now 120 seconds.
+
 ## 2026-10-13 · Coworld 0.7.12 · Game log and results record seat health and timing
 
 **What changed.** Coworld 0.7.12. The game records operational data for the league
