@@ -100,7 +100,8 @@ def last_jobs(ep, policy, version_id):
     last = max(int(p["turn"]) for p in phases if p["phase"] == "Diplomacy")
     if last % 2 != 1:
         return []
-    return [{**j, "actual": results["scores"][j["slot"]]} for j in jobs_for(ep, policy, version_id) if j["turn"] == last]
+    return [{**j, "actual": results["scores"][j["slot"]]} for j in jobs_for(ep, policy, version_id)
+            if j["turn"] == last]
 
 
 def run(server, job):
