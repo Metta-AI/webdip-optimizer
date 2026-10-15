@@ -84,5 +84,36 @@
     "policy_ref": "b5b3620d-d6b3-49d4-9404-28d89acdd19d"
    }
   ]
+ },
+ "league-top5-and-v5-2026-10-15": {
+  "league": "press",
+  "variant": "classic-press",
+  "defined": "2026-10-15 04:20Z: league-top5-2026-10-14 plus scott-pidip:v5 (the league entry), a six-seat set for a candidate's health game",
+  "seats": [
+   {
+    "label": "co-gas-webdiplomacy-relh:v17",
+    "policy_ref": "843aa23d-6f4d-401a-9d80-ebfd0411e4c9"
+   },
+   {
+    "label": "strategist:v5",
+    "policy_ref": "a9a1d63f-3769-4736-b023-f0f86b1e3c8d"
+   },
+   {
+    "label": "webdiplomacy-player:v4",
+    "policy_ref": "70288c74-553f-4b84-a9d1-915c6ff43ffc"
+   },
+   {
+    "label": "comax-webdip:v4",
+    "policy_ref": "298126bc-b892-4fc3-823c-9255ccc50dea"
+   },
+   {
+    "label": "daf-diplomacy:v1",
+    "policy_ref": "b5b3620d-d6b3-49d4-9404-28d89acdd19d"
+   },
+   {
+    "label": "scott-pidip:v5",
+    "policy_ref": "9263a7b8-ff15-4634-bec1-9a22484d5d44"
+   }
+  ]
  }
 }
