@@ -18,7 +18,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   was deleted in 2 (seat_health disconnect at 1335 and 1338 s, the same minute, about 19:50Z; scores 0.019 and
   0.094); 5 of 42 seats in that round disconnected, most of them other entrants', so platform-side. The clean game:
   0.116, 5 centres, 0 rejected, 0 of 72 calls failed. Rounds now hold 6 games (12 before round 56); round 56 did
-  not seat us.
+  not seat us. Round 58 (fetched 21:30Z, v15 in 3, no taint): Turkey 0.757 (16 centres, 1st of 7), Russia 0.106
+  (4th), Germany 0.020 (6th); 0 rejected, 0 exceptions, 0 of 238 calls failed, 4 HTTP errors, $1.14 of model
+  calls. So far 4 clean league games: mean 0.250. Fetch the next rounds with `fetch_league.py press --policy
+  scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
