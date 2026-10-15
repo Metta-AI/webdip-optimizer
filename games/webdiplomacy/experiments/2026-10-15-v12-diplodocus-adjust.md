@@ -3,7 +3,7 @@ id: 2026-10-15-v12-diplodocus-adjust
 policy: scott-pidip
 baseline: scott-pidip:v10
 candidate: scott-pidip:v12
-status: running
+status: confirmed
 hypothesis: >
   The hybrid scores more when Diplodocus's policy network chooses its retreats and builds because those phases
   still come from DumbBot's centre-value heuristics (castlereagh/search.py SearchBot.choose, dumbbot.py
@@ -44,4 +44,25 @@ Paired, balanced (`run_ab.py`, 14 bodies x 5 = 70 games) against `league-top5-20
 
 ## Result
 
+Read 09:13Z on 2026-10-15 with 69 of 70 games fetched (one batch had a game still unfinished after 2 hours;
+`run_ab.py` stopped at its time limit). `paired.py`, `wd.py metrics`, `wd.py costs`.
+
+- **Paired:** v12 minus v10 **+0.089 ± 0.061 a game, t 1.46, n = 54 clean pairs** (paired SD 0.446; 5 dropped
+  for taint; 10 games failed on the platform). At 52 pairs it was +0.105 ± 0.061.
+- **Alone:** v12 0.380 a game (+0.278 ± 0.037 over par, n = 56), 9.55 final centres, solo in 10.7%; v10 0.295
+  (+0.172 ± 0.033), 8.32 centres, solo 3.5%.
+- **By power against par:** v12 above v10 at six powers (Austria +0.12, England +0.15, France +0.10, Germany
+  +0.08, Russia +0.09, Turkey +0.17) and below at Italy (-0.13); no cell past |z| 1.4 (8 to 10 games a cell).
+- **Diplodocus use:** 369 retreat and build phases took Diplodocus's orders, 5 fell back as not legal and 27 on a
+  failed call (92%); 69 calls needed a retry.
+- **Telemetry:** 0 rejected orders either arm; 2 press-wake timeouts in v12 (logged as exceptions, the seat
+  played on). Failed calls v12 483 of 5,031 (9.6%), v10 515 of 5,190 (9.9%): the platform's 502s rose to about
+  10% of calls after 07:10Z for every seat, and a retry within 5 s of a 502 now fails.
+- **Spend:** v12 $0.380 a seat (max $0.454), v10 $0.379 (max $0.467); none over $0.50.
+
 ## Verdict
+
+**Confirmed** against the pre-registered rule: +0.089 a game (at least +0.03) with t 1.46 (at least 1) over 54
+pairs, 0 rejected orders, failed calls no higher than v10's, spend under $0.50, Diplodocus orders in 92% of the
+phases. |z| < 2, so the size is uncertain (one SE either side spans +0.03 to +0.15). Entry put to Scott at 09:14Z,
+with v13 (v12 plus 6 s and 12 s retry waits) offered to follow after its health games.
