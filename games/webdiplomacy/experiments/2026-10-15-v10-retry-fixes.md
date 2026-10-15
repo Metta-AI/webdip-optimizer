@@ -42,7 +42,7 @@ Read 06:45Z on 2026-10-15, three classic-press-short games, all completed, no ta
 |---|---|---|
 | Rejected orders, exceptions | 0, 0 | 0, 0 |
 | Model calls failed | 2 of 164 (1.2%), both 502 | 7 of 167 (4.2%) |
-| Jev calls | 0 | 3 gated wakes' worth (403) |
+| Jev calls | 0 | 1 (403) |
 | Press wakes | 55 ok, 3 call limit, 0 error | 50 ok, 3 call limit, 1 error |
 | Diplodocus samples failed | 0 (1 retried and answered) | 0 |
 | Sol spend, 3 seats | $0.84 | $0.79 |
