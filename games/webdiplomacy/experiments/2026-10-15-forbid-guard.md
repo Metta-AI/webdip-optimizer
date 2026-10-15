@@ -3,7 +3,7 @@ id: 2026-10-15-forbid-guard
 policy: scott-pidip
 baseline: scott-pidip:v15
 candidate: scott-pidip:v17
-status: proposed
+status: running
 hypothesis: >
   The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's
   hosted games Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
@@ -21,12 +21,12 @@ decision_rule: >
   failed calls no higher than v15's in the same games, wake timeouts no more than v15's, and a clean health game.
   Entry needs Scott's explicit go-ahead naming the version. Otherwise v15 stays the candidate and the lever goes to
   open_levers.md (inconclusive) or closed_levers.md (refuted, below -0.03 with t at least 1).
-evals: []
+evals: [xreq_62d3a239-76fd-4871-847b-8432fb22faee, xreq_3bf32806-f721-4920-88ad-b0b50d375645, xreq_eff92380-b6a5-45c6-9aac-43d45f452ffe, xreq_613b6496-0d1b-41ea-8e18-8e87b8f37bb1, xreq_bae3df49-7162-48cf-b71b-efe2473deb01, xreq_3dc4668a-8d18-4948-bc66-316aaefbe8d4, xreq_fda13835-1b9b-4eaa-8fde-4fed599673de, xreq_38a5354d-e083-4191-aa62-8163c7884206, xreq_4f939ee5-5c4a-4c76-b769-d561a6dceab4, xreq_783fb56f-9b00-4cb0-8eb0-87375591d35f, xreq_0483f36b-132a-4123-a317-12d3c13d4598, xreq_1c017bc1-211e-40b4-bbf5-af5dee2c452b, xreq_b261abd1-4706-479c-90f8-a62c3b6c685f, xreq_9f8ba685-20cb-433a-a80c-91d0642ab4aa]
 cost: >
-  As v14's test: one classic-press-short health game, then 56 full press games against league-top5-2026-10-14,
-  both arms' Sol calls on Scott's OpenRouter key through the router endpoint (about $0.37 a seat, about $41) and
-  the platform's estimate at create (about 80 to 190 credits). The key had $26 left at 12:41Z and v7's league games
-  draw about $2.5 an hour, so this waits for Scott to raise the key's limit.
+  As v14's test: three classic-press-short health games (3.5 credits by the platform's estimate at create), then 56
+  full press games against league-top5-2026-10-14 (662.6 credits by the platform's estimate at create, 11.83 a game;
+  v14's run was quoted 616.5), both arms' Sol calls on Scott's OpenRouter key through the router endpoint (about
+  $0.37 a seat, about $41). Scott raised the key's limit to $380 at 20:55Z ($74.81 left then).
 artifacts: []
 ---
 
@@ -120,6 +120,9 @@ all 3 completed, no taint: v17 0 rejected orders, 0 exceptions, 0 of 160 model c
 limit, 4 HTTP 400s on the context poll mid-game; v15 in the same games 0, 0, 0 of 163, 2, and 1. The forbid guard
 dropped forbids in 8 of 53 commits it judged (2 of 3 games), each on a value gain over 0.01. Health passes; Scott
 raised the key's limit to $380 at 20:55Z, so the paired run follows.
+
+Paired run launched 21:14Z: 14 batches, `-n 4` (56 games), ids in `evals`, artifacts in
+`.runtime/artifacts/2026-10-15-forbid-guard`; `run_ab.py` watches and reads when they end.
 
 ## Verdict
 
