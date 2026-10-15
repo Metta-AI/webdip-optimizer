@@ -72,7 +72,8 @@ forbidden provinces were in one. Deals made in plain English are not seen, so "n
 
 So the candidate drops only the forbids no accepted DMZ covers: it frees the 120 phases (and part of the 31) at no
 broken promise. Dropping agreed DMZs too (9dc114b alone) would also free the 96, at the cost the value cannot see;
-that variant is one line away if this one confirms.
+that variant is one line away if this one confirms. The other side keeps these deals: in the same 56 seats our
+roster logged 379 accepted DMZs and 11 breaches of one (`talker_breach`), so our side of a DMZ buys something.
 
 ## Predictions — pre-registered
 
