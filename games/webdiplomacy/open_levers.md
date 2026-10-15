@@ -52,3 +52,16 @@ v11 spent $0.477 a seat against $0.393 and went over $0.50 in 15 of 70 seats
 **A second try must add:** a reason the extra press spend changes orders when Diplodocus already ranks them; and a
 governor that holds $0.50 on a route the platform does not cap.
 
+
+## More sampled replies when Diplodocus ranks our plans (META_RANK_SAMPLES 16 to 64)    tested 2026-10-15
+**Mechanism:** the seat plays the plan Diplodocus's value network rates best, averaged over META_RANK_SAMPLES
+sampled replies of the others (castlereagh/meta.py values). More replies lower the noise in each plan's value.
+**Read:** offline only, no hosted games (`instruments/rank_noise.py` on 300 movement phases of v14's paired run,
+local Diplodocus server, 13.1 distinct plans a phase). Two independent 16-reply rankings pick the same plan in
+178 of 300 phases, but where they differ the two picks are 0.002 apart (median) in 64-reply value. Picking on 64
+replies instead of 16: -0.0006 ± 0.0010 a phase ex post (value after the phase against the others' actual
+orders); 32 replies: -0.0004 ± 0.0007. Ranking itself pays: the 16-reply pick beats the average candidate by
++0.0078 ± 0.0013. A 64-reply values call took 12.6 s against 3.7 s (median, local CPU).
+**Could see:** about 0.002 a phase at z 2.
+**A next test needs:** a reason to expect value noise costs games (it did not show here), and room on the
+endpoint for 3.4 times the values time; not worth hosted games on this read.
