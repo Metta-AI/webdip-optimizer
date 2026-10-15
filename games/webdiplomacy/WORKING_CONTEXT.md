@@ -23,7 +23,8 @@ health-only change, with clean health games; enter only with his go-ahead naming
 - Two candidates on v15, uploaded (inert) and not yet health-checked, each waiting for key room: v17, the forbid
   guard (Diplodocus may overrule the provinces Sol forbids outside an agreed DMZ,
   `experiments/2026-10-15-forbid-guard.md`, local wiring clean), and v18, notes at phase starts only (spend about
-  -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set).
+  -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). Health requests are
+  written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
