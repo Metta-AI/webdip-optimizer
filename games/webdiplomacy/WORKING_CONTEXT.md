@@ -44,7 +44,7 @@ None.
   Its 22 failed Diplodocus calls all fell between 06:33 and 07:57Z, the sidecar's 502 window; 0 in 375 movement
   decisions since round 49.
 - When the OpenRouter key runs dry the entry keeps playing Diplodocus's orders, silent: a local game of v15's image
-  with every Sol call answered 402 (`/home/user/dipwork/rankpress/keydry`, 2026-10-15 18:50Z, end_year 1902) made
+  with every Sol call answered 402 (`/home/user/dipwork/rankpress/keydry`, 2026-10-15, ended 18:46Z, end_year 1902) made
   1 call a wake with no retry, 0 rejected orders, 0 exceptions, and saved Ready at each lock. Its strength without
   press is not measured.
 - Launching 56 games at once lost 3 to `player_never_started`; plan a few spare games over a bar's minimum.
