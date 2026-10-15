@@ -16,8 +16,8 @@ decision_rule: >
   22:57Z on 2026-10-14 for a Sol-plus-Diplodocus version that clears this bar. Otherwise v5 stays.
 evals: []
 cost: >
-  One classic-press-short health game (hybrid alone against league-top5-and-v5-2026-10-15), then 56 full press
-  games (-n 4, 14 bodies) with every platform-metered seat capped at $0.50. The hybrid's own model calls go
+  One classic-press-short health game (hybrid alone against league-top5-and-v5-2026-10-15), then 70 full press
+  games (-n 5, 14 bodies) with every platform-metered seat capped at $0.50. The hybrid's own model calls go
   through its registered endpoint, which the platform meters at $0: they bill to Scott's OpenRouter key, and
   the hybrid's governor holds them to the cap the sidecar reports. Modal CPU time for the endpoint is extra.
 artifacts: []
@@ -53,11 +53,21 @@ scoring 0.05 above v6. The hybrid's press layer is from the same squeeze family 
 
 Health game first: hybrid alone against `league-top5-and-v5-2026-10-15` on classic-press-short. It must show
 0 rejected orders, Diplodocus answers in most movement phases, the governor counting spend, and no endpoint
-errors. Then the paired, balanced design (`run_ab.py`, 14 bodies x 4) against `league-top5-2026-10-14`,
-`--llm-budget-usd 3.5`.
+errors. Then the paired, balanced design (`run_ab.py`, 14 bodies x 5 = 70 games) against `league-top5-2026-10-14`,
+`--llm-budget-usd 3.5`. Five a body, not four: the v6 run lost 9 of 56 games to platform pod failures, and the
+rule needs 50 clean pairs. The one read is on the whole run.
 
 Health game: `xreq_2647f478-bc8c-4a70-b2c3-7542e926f7ac` (launched 04:05Z on 2026-10-15; platform estimate 14.9
 credits), fetched to `.runtime/artifacts/2026-10-15-hybrid-diplodocus-vs-v5-health`.
+
+Health game result (read 04:35Z): v7 played Italy to 1904 (4 centres, 0.091; v5 as Austria 5 centres).
+0 rejected orders, 0 exceptions, 50 of 50 model calls 200 (all Sol through the router, $0.245 by the
+governor's count; the platform metered $0 and reported the $0.50 limit). Diplodocus answered in every movement
+phase the seat logged (32 samples, samples 0.3 to 1.5 s, values 1.2 to 1.7 s, 0 failed), and the value net
+changed the pick each time. Three movement phases (S1901, A1902, S1904) ended with an upstream HTTP 400 at the
+phase end and no `decision` line, but the replay shows Italy's orders for all three (v5 had one such phase).
+The wake gate's Jev calls get 403 on this route (its allowlist is the registered model only), so the gate
+wakes on every proposal instead (7 of 12 gate checks): more Sol calls, still under the governor.
 
 Confound: the hybrid's spend is held by its own governor, not by the sidecar. If the governor's count misses
 the router's `usage.cost`, the hybrid may spend more than $0.50 a seat; the health game checks that against the
