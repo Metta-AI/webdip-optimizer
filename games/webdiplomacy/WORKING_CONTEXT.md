@@ -33,6 +33,11 @@ None.
 
 ## Load-bearing facts
 
+- v7 in the league, rounds 47 to 53 (to 15:11Z): 0.516 a game over 28 clean games, +0.40 over par, solo 18%
+  (`wd.py metrics .runtime/artifacts/league-press --policy scott-pidip:v7`). Its 6 exception games are a rival's
+  DAIDE with an unclosed bracket crashing the reply parser at turn 0 (fixed in 6968d05, in v15); the seat plays on.
+  Its 22 failed Diplodocus calls all fell between 06:33 and 07:57Z, the sidecar's 502 window; 0 in 375 movement
+  decisions since round 49.
 - Launching 56 games at once lost 3 to `player_never_started`; plan a few spare games over a bar's minimum.
 - Sol's analysis tools (predict, evaluate, assess_deal) and search reports use pidip's DumbBot opponent samples,
   not Diplodocus (META_OPP is off); Sol calls predict/evaluate/assess_deal under once a game (v14 run).
