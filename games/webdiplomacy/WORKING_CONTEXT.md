@@ -24,13 +24,13 @@ health-only change, with clean health games; enter only with his go-ahead naming
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
   room on the OpenRouter key in the `diplodocus-router` Modal secret ($26 left at 12:41Z; the league entry uses
   about $2.5 an hour; a 56-game paired run about $44).
-- Two candidates on v15, uploaded (inert) and not yet health-checked, each waiting for key room: v17, the forbid
+- Two candidates on v15, uploaded (inert), each waiting for key room: v17, the forbid
   guard (Diplodocus may overrule the provinces Sol forbids outside an agreed DMZ,
   `experiments/2026-10-15-forbid-guard.md`, local wiring clean), and v18, notes at phase starts only (spend about
-  -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). Health requests are
-  written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
+  -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). v18's health request is
+  written (`.runtime/requests/2026-10-15-v18-health.json`: 3 short games beside v15), not launched.
 - Scott chose v17 (18:24Z) for the next paired test once the key has room. Its health games are running
-  (`xreq_ffc01694`, launched 20:47Z, read with `wd.py metrics` for v17 and v15); the paired run is
+  (`xreq_ffc01694`, launched 20:47Z, read with `wd.py metrics` for v17 and v15); the paired run is then
   `run_ab.py --record 2026-10-15-forbid-guard --a scott-pidip:v17 --b scott-pidip:v15 --field-set
   league-top5-2026-10-14 -n 4`. Key: limit still $320, $15.85 left at 20:46Z (told Scott). The league entry drew
   about $1.6 an hour from 12:41Z to 18:29Z, then about $0.4 an hour once rounds shrank to 6 games.
