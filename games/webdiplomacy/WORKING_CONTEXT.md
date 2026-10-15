@@ -43,6 +43,10 @@ None.
   DAIDE with an unclosed bracket crashing the reply parser at turn 0 (fixed in 6968d05, in v15); the seat plays on.
   Its 22 failed Diplodocus calls all fell between 06:33 and 07:57Z, the sidecar's 502 window; 0 in 375 movement
   decisions since round 49.
+- When the OpenRouter key runs dry the entry keeps playing Diplodocus's orders, silent: a local game of v15's image
+  with every Sol call answered 402 (`/home/user/dipwork/rankpress/keydry`, 2026-10-15 18:50Z, end_year 1902) made
+  1 call a wake with no retry, 0 rejected orders, 0 exceptions, and saved Ready at each lock. Its strength without
+  press is not measured.
 - Launching 56 games at once lost 3 to `player_never_started`; plan a few spare games over a bar's minimum.
 - Sol's analysis tools (predict, evaluate, assess_deal) and search reports use pidip's DumbBot opponent samples,
   not Diplodocus (META_OPP is off); Sol calls predict/evaluate/assess_deal under once a game (v14 run).
