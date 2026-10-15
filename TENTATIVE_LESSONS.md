@@ -16,3 +16,5 @@ tell whether a later session hit the same thing.
 ---
 
 *(empty)*
+- 2026-10-15: `until ! pgrep -f "name.py" ...` inside a background shell never ends, because the waiting shell's own
+  command line contains the pattern. Write the pattern as `"[n]ame.py"`.
