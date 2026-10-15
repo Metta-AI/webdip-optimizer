@@ -27,7 +27,7 @@ decision_rule: >
   against the same bar: at least +0.03 a game with t at least 1, 0 rejected orders, failed calls and wake
   timeouts no more than v15's over the 112 games. If it clears, entry is put to Scott; otherwise v15 stays and
   the verdict stands.
-evals: [xreq_62d3a239-76fd-4871-847b-8432fb22faee, xreq_3bf32806-f721-4920-88ad-b0b50d375645, xreq_eff92380-b6a5-45c6-9aac-43d45f452ffe, xreq_613b6496-0d1b-41ea-8e18-8e87b8f37bb1, xreq_bae3df49-7162-48cf-b71b-efe2473deb01, xreq_3dc4668a-8d18-4948-bc66-316aaefbe8d4, xreq_fda13835-1b9b-4eaa-8fde-4fed599673de, xreq_38a5354d-e083-4191-aa62-8163c7884206, xreq_4f939ee5-5c4a-4c76-b769-d561a6dceab4, xreq_783fb56f-9b00-4cb0-8eb0-87375591d35f, xreq_0483f36b-132a-4123-a317-12d3c13d4598, xreq_1c017bc1-211e-40b4-bbf5-af5dee2c452b, xreq_b261abd1-4706-479c-90f8-a62c3b6c685f, xreq_9f8ba685-20cb-433a-a80c-91d0642ab4aa]
+evals: [xreq_62d3a239-76fd-4871-847b-8432fb22faee, xreq_3bf32806-f721-4920-88ad-b0b50d375645, xreq_eff92380-b6a5-45c6-9aac-43d45f452ffe, xreq_613b6496-0d1b-41ea-8e18-8e87b8f37bb1, xreq_bae3df49-7162-48cf-b71b-efe2473deb01, xreq_3dc4668a-8d18-4948-bc66-316aaefbe8d4, xreq_fda13835-1b9b-4eaa-8fde-4fed599673de, xreq_38a5354d-e083-4191-aa62-8163c7884206, xreq_4f939ee5-5c4a-4c76-b769-d561a6dceab4, xreq_783fb56f-9b00-4cb0-8eb0-87375591d35f, xreq_0483f36b-132a-4123-a317-12d3c13d4598, xreq_1c017bc1-211e-40b4-bbf5-af5dee2c452b, xreq_b261abd1-4706-479c-90f8-a62c3b6c685f, xreq_9f8ba685-20cb-433a-a80c-91d0642ab4aa, xreq_a5cff44f-d436-453b-96c6-322f08ca9365, xreq_0b8c7027-0393-49fe-8008-1eb30795baa8, xreq_045fdb67-e450-489c-a58d-1ee35f38c61e, xreq_050c1f1e-db72-4e8c-997f-a7b660fac74d, xreq_87446466-aa25-442f-a40c-882817981383, xreq_6bbae3ff-08e4-4fc7-9f75-81528553789e, xreq_4e1201b5-0aad-46c0-b396-74f2bc529458, xreq_06dfab2d-33f8-4021-83d8-4b28f9dc2fd7, xreq_fe15b64c-2015-4d1b-9fcc-3ef9e1164e28, xreq_ad273168-6311-40bf-b707-b800357129f8, xreq_4b57f7ed-0156-4d41-95b4-ed0609470cdb, xreq_442e4ae1-90f0-4a21-882a-b8ace8a0ef8d, xreq_889ce9c4-d1ee-4ef4-85b8-815b156635a4, xreq_29154b32-cd1d-47c5-a257-e33da9cfbbe7]
 cost: >
   As v14's test: three classic-press-short health games (3.5 credits by the platform's estimate at create), then 56
   full press games against league-top5-2026-10-14 (662.6 credits by the platform's estimate at create, 11.83 a game;
@@ -151,9 +151,13 @@ Read 22:10Z on 2026-10-15, all 56 games finished (none failed on the platform, n
   1908; every game started together, so this is game time as much as clock time). Wakes ended at the time limit:
   v17 51, v15 58. Spend by the seat logs: v17 $0.387 a seat, v15 $0.386.
 
+Second set (the extension in the decision rule): Scott approved raising the OpenRouter key's limit from $380 to
+$430 (token broker, 23:05Z); 14 batches, `-n 4` (56 games) launched with `run_ab.py --add-set` about 23:06Z,
+654.3 credits by the platform's estimate at create; ids appended to `evals`.
+
 ## Verdict
 
-**Inconclusive** against Scott's bar. +0.055 a game clears +0.03, but t 0.77 over 56 pairs is below 1; the
+**First set (superseded by the read on all 112 games): inconclusive** against Scott's bar. +0.055 a game clears +0.03, but t 0.77 over 56 pairs is below 1; the
 clean-only read (+0.136, t 1.68) has 42 pairs, under 50; and wake timeouts were 9 against v15's 7 (0.65% and 0.47%
 of wakes), where the rule asks for no more than v15's. v15 stays the candidate and the lever goes to
 `open_levers.md`. The prediction's mechanism held (forbids dropped 3.7 times a seat) and the feared cost did not
