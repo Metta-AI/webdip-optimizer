@@ -35,3 +35,30 @@ justified it, the human's recorded go-ahead, and the rollback plan.
 - **Placed:** `sub_4e128c27`, membership `lpm_f5264e77`, competing/active and champion at 06:06Z; v5 benched.
 - **Rollback:** resubmit `scott-pidip:v5` (`9263a7b8-ff15-4634-bec1-9a22484d5d44`) to the same league as
   macromackie: `coworld submit scott-pidip:v5 --league league_1bccc63d-cd0a-47d7-92d7-e762797b5f1c --no-open-browser`.
+
+### 2026-10-15 18:27Z: scott-pidip:v15 enters league_1bccc63d (classic press) in place of v7
+
+- **Acting player:** macromackie (`ply_5b832230-f519-4af8-adda-bb3e02349b7d`). **League:**
+  `league_1bccc63d-cd0a-47d7-92d7-e762797b5f1c`, classic press, 3-minute phases, ends 1908. **Version:**
+  `scott-pidip:v15` (`2fcc2040-f729-4486-93cd-56d115621faa`), image `pidip:hybrid-pinguard2`: v14 (Diplodocus pin
+  guard) with the guard bounded by the wake's time left. Source: `local/hybrid-luna` at 82fc3c3 (policies commit
+  3700a2b on top of v14's).
+- **Evidence:** v10 the retry fixes over v7 (`2026-10-15-v10-retry-fixes`, confirmed), v12 minus v10 +0.089
+  a game, t 1.46, n = 54 (`2026-10-15-v12-diplodocus-adjust`, confirmed), v13 the retry waits
+  (`2026-10-15-v13-retry-waits`, confirmed), v14 minus v13 +0.132 a game, t 1.99, n = 56 clean pairs, 0 rejected
+  orders, failed calls below v13's (`2026-10-15-v14-value-pin-guard`, confirmed against Scott's +0.03 bar). v15
+  plays as v14 when the guard runs; its 3 classic-press-short health games beside v14 (`xreq_39bb7446`) had 0
+  rejected orders, 0 exceptions, 0 of 181 model calls failed, 0 timed-out wakes (`2026-10-15-v15-guard-timing`,
+  confirmed). v15 also carries the fix for v7's turn-0 crash on rival DAIDE (6 of v7's league games). No paired
+  run of v15 against v7 itself: the chain v7 to v10 to v12 to v13 to v14 is measured step by step.
+- **Known weaknesses:** a values call that misses the wake's bound plays the pinned plan (1 of 41 in the health
+  games); the guard keeps every province Sol forbids (v17's lever); Sol spends about $0.375 a seat on the
+  OpenRouter key, which had $17.76 left at 18:05Z.
+- **Go-ahead:** Scott, 18:24Z on 2026-10-15, chose "Enter v15" on the card "Enter v15 (v14 plus the press-wake
+  timing fix) in the league in place of v7?", then wrote in the project chat: "ok i left some comments tell tit to
+  keep going idk what is bets but like whatever it thinkgs make sense i trust".
+- **Placed:** `sub_45b39127`, membership `lpm_9647eb8d`, competing/active and champion at 18:27:54Z; v7
+  (`lpm_f5264e77`) benched.
+- **Rollback:** resubmit `scott-pidip:v7` (`044a0425-e107-456a-83d7-765b9ad25cc9`) as macromackie:
+  `coworld submit scott-pidip:v7 --league league_1bccc63d-cd0a-47d7-92d7-e762797b5f1c --player
+  ply_5b832230-f519-4af8-adda-bb3e02349b7d --no-open-browser`.

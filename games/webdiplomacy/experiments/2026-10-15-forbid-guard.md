@@ -110,7 +110,8 @@ in the rule.
 
 ## Result
 
-Not yet run.
+Not yet run. Scott chose this as the next paired test (card, 18:24Z on 2026-10-15); it waits for him to
+raise the OpenRouter key's limit ($16.76 left at 18:29Z). The baseline v15 has been the league entry since 18:27Z.
 
 ## Verdict
 

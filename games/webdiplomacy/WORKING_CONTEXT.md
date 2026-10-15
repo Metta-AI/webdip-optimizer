@@ -7,15 +7,14 @@ read; reseed on pivot.
 ## Current objective
 
 Keep Scott's league entry strongest with Diplodocus (Meta's networks on Scott's Modal endpoint) choosing the
-orders and Sol doing the press. The entry is `scott-pidip:v7` (champion since 2026-10-15 06:06Z, membership
-`lpm_f5264e77`). Replace it only with a version that clears Scott's release bar (pidip README) or, for a
+orders and Sol doing the press. The entry is `scott-pidip:v15` (champion since 2026-10-15 18:27Z, membership
+`lpm_9647eb8d`; v7 benched, rollback in VERSION_LOG's decision record). Replace it only with a version that clears Scott's release bar (pidip README) or, for a
 health-only change, with clean health games; enter only with his go-ahead naming the version.
 
 ## Open threads
 
-- v15 (v14 plus the pin guard bounded by the wake's time left) is the entry candidate: v14 beat v13 by +0.13 over
-  56 pairs (`experiments/2026-10-15-v14-value-pin-guard.md`), v15's health games are clean
-  (`experiments/2026-10-15-v15-guard-timing.md`). Card to Scott at 12:41Z.
+- v15 entered at 18:27Z on Scott's "Enter v15" (18:24Z). Its first league rounds are the first read of v15 alone
+  against the league field; compare with v7's 0.506 a game below.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
@@ -26,8 +25,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   `experiments/2026-10-15-forbid-guard.md`, local wiring clean), and v18, notes at phase starts only (spend about
   -11%, `experiments/2026-10-15-notes-at-start.md`, its decision rule is Scott's to set). Health requests are
   written (`.runtime/requests/2026-10-15-v17-health.json`, `-v18-`: 3 short games each beside v15), not launched.
-- Card to Scott at 16:50Z: which version gets the next paired test once the key has room (v17 recommended, v18,
-  v16, or hold). Key: $18.33 left at 17:26Z; the league entry averaged $1.65 an hour from 12:41Z.
+- Scott chose v17 (18:24Z) for the next paired test once the key has room: health request first, then
+  `run_ab.py --record 2026-10-15-forbid-guard --a scott-pidip:v17 --b scott-pidip:v15 --field-set
+  league-top5-2026-10-14 -n 4`. Key: limit still $320, $16.76 left at 18:29Z (told Scott); the league entry
+  averaged about $1.6 an hour from 12:41Z.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
