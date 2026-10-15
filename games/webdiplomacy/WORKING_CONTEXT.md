@@ -32,8 +32,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
 - Scott chose v17 (18:24Z) for the next paired test once the key has room. Its health games are running
   (`xreq_ffc01694`, launched 20:47Z, read with `wd.py metrics` for v17 and v15); the paired run is then
   `run_ab.py --record 2026-10-15-forbid-guard --a scott-pidip:v17 --b scott-pidip:v15 --field-set
-  league-top5-2026-10-14 -n 4`. Key: limit still $320, $15.85 left at 20:46Z (told Scott). The league entry drew
-  about $1.6 an hour from 12:41Z to 18:29Z, then about $0.4 an hour once rounds shrank to 6 games.
+  league-top5-2026-10-14 -n 4`. Key: limit raised from $320 to $380 at 20:55Z ($74.81 left) on Scott's ask,
+  through the token broker's `openrouter.manage` (one-run grant he approved in Slack; the key is named
+  "foundry-artificer" on the company account). The league entry drew about $1.6 an hour from 12:41Z to 18:29Z,
+  then about $0.4 an hour once rounds shrank to 6 games.
 - Endpoint load: during a paired run the live entry's values calls slow from about 4 s to 14 s at p90 (league seat
   logs by hour); max_containers is 8.
 
