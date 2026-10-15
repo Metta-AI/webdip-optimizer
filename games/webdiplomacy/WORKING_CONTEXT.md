@@ -22,7 +22,9 @@ health-only change, with clean health games; enter only with his go-ahead naming
   (4th), Germany 0.020 (6th); 0 rejected, 0 exceptions, 0 of 238 calls failed, 4 HTTP errors, $1.14 of model
   calls. Round 59 (fetched 22:41Z, v15 in 3, no taint): 1st in all three, solos as France and Germany (20 centres,
   1.0 each) and Italy 0.585 (12 centres); 0 rejected, 0 exceptions, 2 of 228 calls failed, 5 HTTP errors. So far 7
-  clean league games: mean 0.512 (v7's league mean was 0.506). Fetch the next rounds with `fetch_league.py press --policy
+  clean league games: mean 0.512 (v7's league mean was 0.506). Round 60 (fetched about 00:00Z on 10-16, v15 in
+  3): 1st as France 0.723 (16 centres), 1st as France 0.513 (11), 4th as Russia 0.081 (4). Two seats carry the
+  "exception" taint, each one caught wake timeout (the seat played on); counting them, 10 league games: mean 0.490. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
