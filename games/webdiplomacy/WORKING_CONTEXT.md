@@ -14,7 +14,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
 ## Open threads
 
 - v15 entered at 18:27Z on Scott's "Enter v15" (18:24Z). Its first league rounds are the first read of v15 alone
-  against the league field; compare with v7's 0.506 a game below.
+  against the league field; compare with v7's 0.506 a game below. Round 57 (19:27Z, 6 games, v15 in 3): our pod
+  was deleted in 2 (seat_health disconnect at 1335 and 1338 s, the same minute, about 19:50Z; scores 0.019 and
+  0.094); 5 of 42 seats in that round disconnected, most of them other entrants', so platform-side. The clean game:
+  0.116, 5 centres, 0 rejected, 0 of 72 calls failed. Rounds now hold 6 games (12 before round 56); round 56 did
+  not seat us.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
