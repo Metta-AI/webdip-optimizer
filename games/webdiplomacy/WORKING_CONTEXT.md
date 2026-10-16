@@ -24,7 +24,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
   1.0 each) and Italy 0.585 (12 centres); 0 rejected, 0 exceptions, 2 of 228 calls failed, 5 HTTP errors. So far 7
   clean league games: mean 0.512 (v7's league mean was 0.506). Round 60 (fetched about 00:00Z on 10-16, v15 in
   3): 1st as France 0.723 (16 centres), 1st as France 0.513 (11), 4th as Russia 0.081 (4). Two seats carry the
-  "exception" taint, each one caught wake timeout (the seat played on); counting them, 10 league games: mean 0.490. Fetch the next rounds with `fetch_league.py press --policy
+  "exception" taint, each one caught wake timeout (the seat played on); counting them, 10 league games: mean 0.490. Round 61 (fetched 01:05Z on 10-16): 1st as Germany 0.699 (15
+  centres), 1st as England 0.563 (12; one caught wake timeout), 6th as Russia 0.047 (3); 0 rejected; 25 of 250
+  calls failed, every one a 502 "LLM sidecar internal error" between 00:19 and 00:50Z (key not dry: $74 left at
+  01:06Z; cause not found; the Mini Diplomacy farm ran on the same Modal account from about 00:15Z). 13 league
+  games: mean 0.478. v15's league Russia: 0.106, 0.081, 0.047 (the diagnosis's Russia lead). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
