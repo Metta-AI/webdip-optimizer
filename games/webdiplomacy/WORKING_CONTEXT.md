@@ -60,7 +60,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
   every v15 call in rounds 63 to 73 got 403 or 402, so the $81 added since 03:29Z is late-posted charges (inferred:
   most likely the v17 paired run). Field at 15:35Z (field.py's last 30 seats): no new entrants or versions; v15 0.381;
   co-gas-webdiplomacy-relh:v23 0.249 (won two round-72 games with 0.531 and 0.471; v15 ahead of it in 11 of 17
-  shared games since round 64); Bodhisattva:v3 0.217 over 12. Fetch the next rounds with `fetch_league.py press --policy
+  shared games since round 64); Bodhisattva:v3 0.217 over 12. Watch at 18:33Z, rounds 74 and 75 (no press, 0
+  rejected, 0 exceptions): solos as France and Italy (1.0, 1.0), 0.376 tied 1st, 0.151 3rd, 0.134 3rd, 0.083 6th;
+  mean 0.457, so 39 games without press: mean 0.383. Key unchanged ($545.15, dry). Field at 18:35Z (last 27 seats):
+  new grievous:v8 (James Botts, first seated in round 76, no results yet) and kutuzov:v112 (0.093 over 3, tied v15
+  once at 0.134); v15 0.421, co-gas-webdiplomacy-relh:v23 0.263, everyone else at or below 0.26. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
