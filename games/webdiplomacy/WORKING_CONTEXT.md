@@ -31,7 +31,12 @@ health-only change, with clean health games; enter only with his go-ahead naming
   games: mean 0.478. v15's league Russia: 0.106, 0.081, 0.047 (the diagnosis's Russia lead). Round 62 (01:28 to
   02:12Z, no taint): 1st in all three, solos as Austria (20 centres) and Turkey (18), England 0.527 (16); 0 rejected,
   0 exceptions, 0 of 233 calls failed, 2 HTTP errors. The farm ran on Modal through this round, so it did not
-  cause round 61's 502s. 16 league games: mean 0.546. Fetch the next rounds with `fetch_league.py press --policy
+  cause round 61's 502s. 16 league games: mean 0.546. **The OpenRouter key ran out at 02:42Z on 10-16** (usage
+  $463.65 against the $430 limit at 03:29Z, so charges kept landing past the limit; the v17 paired run cost more
+  than estimated, with two of our seats in each game). Round 63 (02:40 to 03:23Z): 75 of 90 calls failed (74 HTTP
+  403, 1 HTTP 402) after 02:42Z, so v15 played Diplodocus's orders without press: 1st as France 0.639 (15
+  centres), Austria 0.078 (4 centres, tied 4th), Italy 0.043 (3 centres, tied 5th); 0 rejected, 0 exceptions.
+  Raising the limit needs Scott's word and a broker request he approves (auto mode blocked preparing it at 03:3xZ). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
