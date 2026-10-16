@@ -40,7 +40,12 @@ health-only change, with clean health games; enter only with his go-ahead naming
   decision card posted in the thread: raise to $500, $550, or leave it). **Scott chose "Leave it" at 05:27Z on
   10-16**: the key stays dry and v15 plays without press; do not raise it or ask again unless he brings it up. Round 64 (fetched 04:41Z, no press, 0 of 62
   calls succeeded): solo as Turkey (1.0), 1st as Russia 0.308 (8 centres), Germany 0.090 (4, tied 4th). Without
-  press so far, 6 games: mean 0.360 (with press, rounds 57 to 62: 0.546 over 16). Fetch the next rounds with `fetch_league.py press --policy
+  press so far, 6 games: mean 0.360 (with press, rounds 57 to 62: 0.546 over 16). Round 65 (watch at 06:33Z, no
+  press, Austria in all three): 0.000 (eliminated, 7th), 0.047 (6th), 0.062 (4th); 0 rejected, 0 exceptions.
+  Every game counted (round 57's pod-deleted games included): with press 0.492 over 18, without 0.252 over 9,
+  difference 0.24 ± 0.15 (z 1.6; powers not balanced). Field at 06:35Z: kutuzov:v108 0.159 over 3 seats (above v15
+  in both shared games); new entrants astra-press:v1 and kutuzov:v109 seated in round 66; Bodhisattva:v3 0.215 over
+  26 is the best non-v15 entrant. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
