@@ -71,7 +71,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
 
 ## Watched ids
 
-None.
+- Scheduled task "webDiplomacy league watch" (`trig_013iSjSE55tZvYUXn7hzk5BW`, every 3 hours from 06:32Z on 10-16):
+  reads v15's new league rounds and compares the field with the newest `.runtime/monitor/field-*.json` (baseline
+  05:30Z on 10-16). Scott, 05:27Z: "leave it for now and we just monitor to see if the meta changes". Round 65 (running
+  at 05:30Z) seats a new entrant, kutuzov:v108 (Andre von Auto, the suvorov author), in place of suvorov:v21.
 
 ## Load-bearing facts
 
