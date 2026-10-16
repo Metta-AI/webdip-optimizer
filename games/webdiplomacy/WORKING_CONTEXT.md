@@ -36,7 +36,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   than estimated, with two of our seats in each game). Round 63 (02:40 to 03:23Z): 75 of 90 calls failed (74 HTTP
   403, 1 HTTP 402) after 02:42Z, so v15 played Diplodocus's orders without press: 1st as France 0.639 (15
   centres), Austria 0.078 (4 centres, tied 4th), Italy 0.043 (3 centres, tied 5th); 0 rejected, 0 exceptions.
-  Raising the limit needs Scott's word and a broker request he approves (auto mode blocked preparing it at 03:3xZ). Fetch the next rounds with `fetch_league.py press --policy
+  Raising the limit needs Scott's word and a broker request he approves (auto mode blocked preparing it at 03:3xZ;
+  decision card posted in the thread: raise to $500, $550, or leave it). Round 64 (fetched 04:41Z, no press, 0 of 62
+  calls succeeded): solo as Turkey (1.0), 1st as Russia 0.308 (8 centres), Germany 0.090 (4, tied 4th). Without
+  press so far, 6 games: mean 0.360 (with press, rounds 57 to 62: 0.546 over 16). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
