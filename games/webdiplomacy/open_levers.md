@@ -117,3 +117,41 @@ seats; wake timeouts 16 against 22.
 also drops agreed DMZ provinces (policies commit 9dc114b alone) frees about 96 more blocking phases of v14's 250,
 at the cost of broken deals the value cannot see.
 
+Paired runs are not the league's regime for the guard: in this run the guard was skipped (too little wake time
+left) on 19.5 to 24.0% of last commits, against 7.3% in v15's league rounds 57 to 60 (9 of 124), so a guard
+lever read on a paired run is read on a different mix of guarded commits (`instruments/guard_skips.py`).
+
+## The spend governor goes silent mid-game because it misprices its levels      sized 2026-10-16
+**Mechanism:** v15 prices `low_reasoning` at 0.6 of a full phase (`castlereagh/press/governor.py` LEVEL_FACTOR at
+policies 82fc3c3), but on Sol's router route no reasoning cut is sent (`pidip/agent.mjs` forwards an effort only
+when the request carries one): 0 of 17,904 calls carried one, and a low_reasoning phase cost $0.0316 (SE 0.0002,
+1,753 phases) against $0.0298 (SE 0.0003, 1,052) for a full one (`instruments/governor_calls.py`). Each observed
+low_reasoning phase inflates the full estimate about 1.7 times, and v15's `GOVERNOR_FEW_WAKES_FACTOR=0.7` is above
+0.6, so few_wakes is never picked once low_reasoning fails: the plan drops to search only.
+**Read:** offline only, v15 and v17 seats of the forbid-guard run (222 seats). 700 search-only movement phases
+(silent in 45% of 1903 phases), yet seats ended $0.060 under the stop on average. Replaying the governor with
+low_reasoning priced at 1.0 leaves 134 (optimistic: 15.8 phases at $0.031 is $0.49 against the $0.45 stop, so
+about half the silence can go). Seat-years with a silent phase, matched on year, power and start centres, lost
++0.131 more centres to the field (SE 0.039; confounded: spend runs high in contested years); seat level r -0.116
+(n 222, noise below 0.13) (`instruments/silent_phases.py`, `instruments/centre_flows.py`).
+**Expected:** about +0.005 to +0.008 a game (range -0.01 to +0.02). The nearest precedent, more press spend
+(v11 minus v10, above), was -0.001 ± 0.051.
+**Change:** `GOVERNOR_LOW_REASONING=low` (equal to PRESS_REASONING, so the player drops the level) and a
+few_wakes factor below 1.0 measured on a local game. Mechanism check: 1903-1904 search-only phases under 15% and
+spend per seat under $0.45.
+**Could see:** a 56-game paired run sees about 0.13 at z 2 (paired SD 0.49); about 3,750 games for +0.016.
+**A next test needs:** to ride with a larger change; not worth hosted games alone.
+
+## The pin guard is skipped on press-wake re-commits, undoing its earlier verdicts      sized 2026-10-16
+**Mechanism:** a press wake often has less time left than the pinned search plus the 10 s reserve
+(`castlereagh/press/service.py` time check, `PIN_GUARD_RESERVE_S`), so its re-commit skips the guard and
+re-pins units an earlier commit of the same phase had freed.
+**Read:** offline only. v15 in the forbid-guard run: the guard was skipped on 275 of 1,412 last commits (19.5%);
+in 124 phases an earlier commit had dropped pins, and in 119 of them the played orders differ from the free plan
+the guard approved; when such a re-commit is judged, the guard drops again 37% of the time (n 153), worth 0.0086
+ex ante a commit (`instruments/guard_overturn.py`). League rounds 57 to 60: skipped on 7.3% (9 of 124).
+**Expected:** about +0.007 a game in the league (+0.003 to +0.015); about +0.016 in paired runs.
+**Change:** keep the last judged free plan when a skipped re-commit re-pins a dropped pin under unchanged forbids,
+or run the free and pinned searches at once.
+**Could see:** as above, far below a paired run's reach.
+**A next test needs:** to ride with a larger change.

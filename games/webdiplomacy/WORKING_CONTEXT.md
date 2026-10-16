@@ -39,8 +39,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
 - v17 (forbid guard) is **inconclusive** on all 112 paired games: +0.029 ± 0.046 a game over v15, t 0.62 (first
   set +0.055, second about +0.002; record and open_levers.md). v15 stays the candidate and the entry. Scott at
   22:57Z on 10-15: "do whatever you think makes the most sense. goal is just to get the best possible bot
-  submitted". Next: find the next lever offline ($0) from the 224 seats of this run and v15's league games, then
-  propose it. Any new paired run needs the key raised again. The key's usage counter lags: at 22:11Z it showed
+  submitted". The offline diagnosis (2026-10-16, 222 seats of this run, 56 of v14's, 12 league seats) found no
+  lever likely to add +0.03 a game: the governor's mispriced levels and the guard skipped on press-wake
+  re-commits are each about +0.005 to +0.008 (open_levers.md, sized 2026-10-16); Russia loses 4.72 ± 0.45 centres
+  a game to the field against 1.3 to 3.0 for the others (n 32; v14's run had Russia at 0.425, n 8), a lead with no
+  mechanism yet. So no paired run is planned; v15 stays. Any new paired run needs the key raised again. The key's usage counter lags: at 22:11Z it showed
   only $4 of the first set's $43, then climbed about $0.5 a minute. Key: limit raised to $430 at 23:05Z (Scott
   approved the broker request); at 00:13Z on 10-16 it showed $106.84 left, about $35 once both sets' charges
   land. Earlier: limit raised from $320 to $380 at 20:55Z ($74.81 left) on Scott's ask,
