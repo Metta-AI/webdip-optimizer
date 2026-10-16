@@ -108,10 +108,12 @@ dry), where the +0.0075 applies; for press seats, replies conditioned on press.
 **Mechanism:** the pin guard also plans without Sol's forbidden provinces that no accepted DAIDE DMZ covers, and
 plays that plan when Diplodocus rates it more than 0.01 higher on 16 fresh replies (castlereagh/press/service.py
 guarded_search; v17 = v15 plus FORBID_GUARD=1). Record: `experiments/2026-10-15-forbid-guard.md`.
-**Read:** 56 hosted paired games against league-top5-2026-10-14 (Coworld 0.7.15): v17 minus v15 +0.055 ± 0.072 a
-game, t 0.77, every game; +0.136 ± 0.081, t 1.68 in the 42 games without a wake timeout. The guard dropped forbids
-3.7 times a seat; centres lost to allies fell from 0.32 to 0.16 a seat; wake timeouts 9 against 7.
-**Could see:** about 0.14 a game at z 2 (paired SD 0.54).
-**A next test needs:** about 96 pairs for t 1 at +0.055, planned before launch; or the variant that also drops
-agreed DMZ provinces (policies commit 9dc114b alone), which frees about 96 more blocking phases of v14's 250.
+**Read:** 112 hosted paired games against league-top5-2026-10-14 (Coworld 0.7.15), two sets of 56, the second
+pre-registered after the first: v17 minus v15 +0.029 ± 0.046 a game, t 0.62, every game (first set +0.055, second
+about +0.002). The guard dropped forbids 3.6 times a seat; centres lost to allies fell from 42 to 30 over 112
+seats; wake timeouts 16 against 22.
+**Could see:** about 0.09 a game at z 2 (paired SD 0.49).
+**A next test needs:** a reason to expect more than +0.03: this one is near zero over 112 pairs. The variant that
+also drops agreed DMZ provinces (policies commit 9dc114b alone) frees about 96 more blocking phases of v14's 250,
+at the cost of broken deals the value cannot see.
 

@@ -3,7 +3,7 @@ id: 2026-10-15-forbid-guard
 policy: scott-pidip
 baseline: scott-pidip:v15
 candidate: scott-pidip:v17
-status: running
+status: inconclusive
 hypothesis: >
   The hybrid scores more when Diplodocus may also overrule the provinces Sol forbids on its own, because in v14's
   hosted games Sol forbade at least one province in 382 of our movement phases and the forbidden list blocked the plan
@@ -155,7 +155,29 @@ Second set (the extension in the decision rule): Scott approved raising the Open
 $430 (token broker, 23:05Z); 14 batches, `-n 4` (56 games) launched with `run_ab.py --add-set` about 23:06Z,
 654.3 credits by the platform's estimate at create; ids appended to `evals`.
 
+Read on all 112 games 00:10Z on 2026-10-16 (the extension's one score read), all 112 finished:
+
+- **Paired, every game:** v17 minus v15 **+0.029 ± 0.046 a game, t 0.62, n = 112** (paired SD 0.49;
+  `--keep-tainted`). Without the one game whose pods were both deleted (ereq_1abd9941, platform-side): +0.029 ±
+  0.049, n = 111. v17 in the lower slot in 56 of 112. The second set alone: about +0.002 a game.
+- **Clean games only (not the rule's read):** +0.078 ± 0.055, t 1.42, n = 79.
+- **By power (16 a cell, same power against par):** v17 ahead at Turkey +0.17, Italy +0.14, France +0.09, Austria
+  +0.08; behind at Russia -0.17 (z -2.26), England -0.09, Germany -0.02. With seven cells one |z| above 2 is
+  expected by chance.
+- **Mechanism:** the guard judged 2,159 commits, 1,000 with forbids, and dropped forbids in 406 (3.6 a seat).
+- **Allies:** centres lost to a power we called an ally the year before: v17 30, v15 42; centres lost in all 2.85
+  and 3.10 a seat.
+- **Telemetry:** wake timeouts v17 16 of 3,345 wakes, v15 22 of 3,447. Failed model calls v17 27 of 8,941, v15 34
+  of 8,963. Rejected orders: v17 10 in one seat (ereq_16616035, France), all in its last movement phase, Autumn
+  1908, the pattern of the end-of-game read the hybrid record called a false positive; not checked further,
+  since the score already fails the bar. Spend by the seat logs $0.39 a seat each arm.
+
 ## Verdict
+
+**Inconclusive** on all 112 games: +0.029 a game is under the +0.03 bar and t 0.62 is under 1. v15 stays the
+candidate and the lever stays in `open_levers.md`. It is not refuted (refuted needs below -0.03 with t at least 1).
+The mechanism fired as designed and allies took fewer centres, but the score gain the first set suggested shrank
+to about zero in the second set.
 
 **First set (superseded by the read on all 112 games): inconclusive** against Scott's bar. +0.055 a game clears +0.03, but t 0.77 over 56 pairs is below 1; the
 clean-only read (+0.136, t 1.68) has 42 pairs, under 50; and wake timeouts were 9 against v15's 7 (0.65% and 0.47%
