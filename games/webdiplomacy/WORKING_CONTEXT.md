@@ -49,7 +49,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   pod_deleted seat in round 67, kept): 1st in 6 of 9 (0.734, 0.124 2nd, 0.462, 0.340 2nd, 0.571, 0.583, 0.068 5th,
   0.616, 0.424), mean 0.436, so 18 games without press: mean 0.344. Field at 09:40Z: kutuzov iterates fast
   (v108 0.159 over 3, v109 0.208 over 6, v110 0.217 over 3); Bodhisattva:v4 entered (0.091 over 3);
-  astra-press:v1 0.113 over 9 (beat v15 once, 0.42 to 0.34); v15 0.464 over 30. Fetch the next rounds with `fetch_league.py press --policy
+  astra-press:v1 0.113 over 9 (beat v15 once, 0.42 to 0.34); v15 0.464 over 30. Watch at 12:33Z, rounds 69 and
+  70 (no press, 0 rejected, 0 exceptions): solos in two (1.0, 1.0), 1st with 0.621 and 0.744, 5th 0.086, 7th 0.0;
+  mean 0.575, so 24 games without press: mean 0.402. Field at 12:35Z: new comax-webdip:v31 and kutuzov:v111; no
+  entrant other than v15 above 0.24 (co-gas-webdiplomacy-relh:v23 0.236 over 27). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
