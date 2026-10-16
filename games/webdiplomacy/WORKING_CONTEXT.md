@@ -45,7 +45,11 @@ health-only change, with clean health games; enter only with his go-ahead naming
   Every game counted (round 57's pod-deleted games included): with press 0.492 over 18, without 0.252 over 9,
   difference 0.24 ± 0.15 (z 1.6; powers not balanced). Field at 06:35Z: kutuzov:v108 0.159 over 3 seats (above v15
   in both shared games); new entrants astra-press:v1 and kutuzov:v109 seated in round 66; Bodhisattva:v3 0.215 over
-  26 is the best non-v15 entrant. Fetch the next rounds with `fetch_league.py press --policy
+  26 is the best non-v15 entrant. Watch at 09:33Z, rounds 66 to 68 (no press, 0 rejected, 0 exceptions; one
+  pod_deleted seat in round 67, kept): 1st in 6 of 9 (0.734, 0.124 2nd, 0.462, 0.340 2nd, 0.571, 0.583, 0.068 5th,
+  0.616, 0.424), mean 0.436, so 18 games without press: mean 0.344. Field at 09:40Z: kutuzov iterates fast
+  (v108 0.159 over 3, v109 0.208 over 6, v110 0.217 over 3); Bodhisattva:v4 entered (0.091 over 3);
+  astra-press:v1 0.113 over 9 (beat v15 once, 0.42 to 0.34); v15 0.464 over 30. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
