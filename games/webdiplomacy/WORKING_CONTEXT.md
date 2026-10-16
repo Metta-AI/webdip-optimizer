@@ -37,7 +37,8 @@ health-only change, with clean health games; enter only with his go-ahead naming
   403, 1 HTTP 402) after 02:42Z, so v15 played Diplodocus's orders without press: 1st as France 0.639 (15
   centres), Austria 0.078 (4 centres, tied 4th), Italy 0.043 (3 centres, tied 5th); 0 rejected, 0 exceptions.
   Raising the limit needs Scott's word and a broker request he approves (auto mode blocked preparing it at 03:3xZ;
-  decision card posted in the thread: raise to $500, $550, or leave it). Round 64 (fetched 04:41Z, no press, 0 of 62
+  decision card posted in the thread: raise to $500, $550, or leave it). **Scott chose "Leave it" at 05:27Z on
+  10-16**: the key stays dry and v15 plays without press; do not raise it or ask again unless he brings it up. Round 64 (fetched 04:41Z, no press, 0 of 62
   calls succeeded): solo as Turkey (1.0), 1st as Russia 0.308 (8 centres), Germany 0.090 (4, tied 4th). Without
   press so far, 6 games: mean 0.360 (with press, rounds 57 to 62: 0.546 over 16). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
