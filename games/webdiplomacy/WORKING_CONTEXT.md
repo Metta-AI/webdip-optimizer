@@ -64,7 +64,14 @@ health-only change, with clean health games; enter only with his go-ahead naming
   rejected, 0 exceptions): solos as France and Italy (1.0, 1.0), 0.376 tied 1st, 0.151 3rd, 0.134 3rd, 0.083 6th;
   mean 0.457, so 39 games without press: mean 0.383. Key unchanged ($545.15, dry). Field at 18:35Z (last 27 seats):
   new grievous:v8 (James Botts, first seated in round 76, no results yet) and kutuzov:v112 (0.093 over 3, tied v15
-  once at 0.134); v15 0.421, co-gas-webdiplomacy-relh:v23 0.263, everyone else at or below 0.26. Fetch the next rounds with `fetch_league.py press --policy
+  once at 0.134); v15 0.421, co-gas-webdiplomacy-relh:v23 0.263, everyone else at or below 0.26. Watch at 21:33Z,
+  rounds 76 and 77 (no press, 0 rejected, 0 exceptions; v15's pod deleted in round 77's ereq_d75f54a4, held its last 6
+  movement phases): 0.202 2nd, 0.219 2nd, 0.571 1st, 0.131 3rd, 0.083 5th (dead pod), solo as France (1.0); mean
+  0.368, so 45 games without press: mean 0.381. Key unchanged. Field at 21:35Z: **grievous:v8 (James Botts) 0.318
+  over its first 6 seats** (0.012, 0.526, 0.333, 0.645, 0.354, 0.040), second to v15 (0.406 over 27); beside v15 it
+  won 0.526 to 0.131 (round 77, clean), 0.333 to 0.083 (round 77, our pod deleted), lost 0.040 to 0.219 (round 76).
+  Reported to Scott; profile it if it stays above 0.25. Also new: nancy-dip:v4, sovereign:v3 (A-aron), no results
+  yet; co-gas-webdiplomacy-relh:v23 0.260. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
