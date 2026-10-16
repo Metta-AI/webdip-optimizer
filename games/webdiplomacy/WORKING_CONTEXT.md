@@ -52,7 +52,15 @@ health-only change, with clean health games; enter only with his go-ahead naming
   astra-press:v1 0.113 over 9 (beat v15 once, 0.42 to 0.34); v15 0.464 over 30. Watch at 12:33Z, rounds 69 and
   70 (no press, 0 rejected, 0 exceptions): solos in two (1.0, 1.0), 1st with 0.621 and 0.744, 5th 0.086, 7th 0.0;
   mean 0.575, so 24 games without press: mean 0.402. Field at 12:35Z: new comax-webdip:v31 and kutuzov:v111; no
-  entrant other than v15 above 0.24 (co-gas-webdiplomacy-relh:v23 0.236 over 27). Fetch the next rounds with `fetch_league.py press --policy
+  entrant other than v15 above 0.24 (co-gas-webdiplomacy-relh:v23 0.236 over 27). Watch at 15:33Z, rounds 71 to
+  73 (no press, 0 rejected, 0 exceptions, 1 HTTP error in round 71): 0.649 1st, 0.181 3rd, 0.645 1st, 0.110 4th,
+  0.000 (Germany: our pod was deleted 2080 s into 2800 s of play, already down to 1 centre by 1906), 0.370 tied 1st,
+  0.333 1st, 0.250 tied 1st, 0.018 6th; mean 0.284 (0.320 over the 8 without the dead pod), so 33 games without
+  press: mean 0.370. Key at 15:35Z: usage $545.15 against the $430 limit, flat to 15:41Z (usage_daily $122.38);
+  every v15 call in rounds 63 to 73 got 403 or 402, so the $81 added since 03:29Z is late-posted charges (inferred:
+  most likely the v17 paired run). Field at 15:35Z (field.py's last 30 seats): no new entrants or versions; v15 0.381;
+  co-gas-webdiplomacy-relh:v23 0.249 (won two round-72 games with 0.531 and 0.471; v15 ahead of it in 11 of 17
+  shared games since round 64); Bodhisattva:v3 0.217 over 12. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint

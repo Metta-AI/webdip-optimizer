@@ -25,3 +25,5 @@ If a session genuinely produced no lessons, write nothing.
 - 2026-10-15: a Diplodocus value gain measured on 16 sampled replies is worth about 0.55 of itself against the
   others' actual orders, at every size from 0.0025 to 0.05 (`rank_noise.py` pairs, 300 v14 phases). Use the factor
   to size a value-margin change before testing it.
+- 2026-10-16: `fetch_league.py` can die on a transient `SSLEOFError` partway through a round (round 71 had 2 of
+  3 games). Rerun the same command: it keeps what it has and fetches the rest.
