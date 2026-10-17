@@ -74,7 +74,7 @@ health-only change, with clean health games; enter only with his go-ahead naming
   yet; co-gas-webdiplomacy-relh:v23 0.260. Watch at 00:33Z on 10-17, rounds 78 and 79 (no press, 0 rejected, 0
   exceptions, no taint beyond llm_failing): 0.084 5th, 0.042 6th, 0.140 3rd, 0.590 1st, 0.102 4th, 0.517 1st; mean
   0.246, so 51 games without press: mean 0.365. Key: usage $545.15, usage_daily 0; `limit_reset` is monthly, so the
-  $430 limit should give room again from 2026-11-01 (inferred from the field; tell Scott when calls succeed). Field
+  $430 limit should give room again from 2026-11-01 (inferred from that key setting; tell Scott when calls succeed). Field
   at 00:35Z (last 27 seats): v15 0.333, co-gas-webdiplomacy-relh:v23 0.279 over 24 (v15 ahead 14, behind 8 since
   round 64), grievous:v8 0.244 over 12 (3 and 3 against v15), new co-gas-webdiplomacy-independent-relh:v4 0.210 over
   3 (1 and 1), new sovereign:v6 0.153 over 3, sovereign:v3 0.170 over 3, nancy-dip:v4 0.036 over 6, new comax-pidip:v1
