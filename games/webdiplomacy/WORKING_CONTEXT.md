@@ -110,7 +110,14 @@ health-only change, with clean health games; enter only with his go-ahead naming
   window; grievous:v8 0.309 over 26 (v15 ahead 6, behind 8 in 14 shared, -0.016); sovereign:v6 0.217 over 26;
   comax-pidip:v1 0.201 over 27; co-gas-webdiplomacy-independent-relh:v4 0.187 over 26; Bodhisattva:v4 0.161 over 26.
   No new entrants; co-gas-webdiplomacy-relh:v23 has left the window. Not reported (no criterion met). No change
-  proposed. Fetch the next rounds with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
+  proposed. 15:33Z 10-17 check: rounds 89 to 91, 9 games, v15 0.410 a game (0.149, 0.641, 0.026, 0.000, 1.000 as a
+  Russia solo, 0.039, 0.647, 1.000 as a France solo, 0.189; places 3, 1, 4, 5, 1, 6, 1, 1, 2); rejected 0,
+  exceptions 0, http errors 0, every LLM call failed (key still dry); one rival seat reconnected once in round 90.
+  v15 without press, rounds 64 to 91: 0.360 over 84. Field (every row now 27 to 30 seats): v15 0.377 over 30;
+  grievous:v8 0.276 over 30 (v15 ahead 7, behind 10 in 17 shared, +0.011); sovereign:v6 0.210;
+  co-gas-webdiplomacy-independent-relh:v4 0.181; comax-pidip:v1 0.177; Bodhisattva:v4 down to 0.099. No new
+  entrants or versions. Not reported (no criterion met). No change proposed. Fetch the next rounds with
+  `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
