@@ -97,8 +97,15 @@ health-only change, with clean health games; enter only with his go-ahead naming
   leads the window, v15 0.288 over 27 (v15 ahead 5, behind 5 in 10 shared, mean v15 - grievous -0.014);
   co-gas-webdiplomacy-relh:v23 0.243 over 12; sovereign:v6 0.207 over 14;
   co-gas-webdiplomacy-independent-relh:v4 0.198 over 14 (v15 ahead 2, behind 4 in 7 shared, -0.014); Bodhisattva:v4
-  0.197 over 26. New: nancy-dip:v5 0.006 over 3. Not reported (no criterion met). No change proposed. Fetch the
-  next rounds with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
+  0.197 over 26. New: nancy-dip:v5 0.006 over 3. Not reported (no criterion met). No change proposed. 09:33Z 10-17
+  check: rounds 84 to 86, 9 games, v15 0.342 a game (0.294, 0.125, 0.410, 0.541, 0.480, 0.686, 0.241, 0.042, 0.256;
+  places 2, 4, 1, 1, 1, 1, 3, 5, 2); rejected 0, exceptions 0, http errors 0 to 1 a round, every LLM call failed (key
+  still dry). v15 without press, rounds 64 to 86: 0.354 over 69. Field: v15 0.309 over 30 tops the window again;
+  grievous:v8 0.308 over 29 (v15 ahead 5, behind 7 in 12 shared, mean v15 - grievous -0.032); sovereign:v6 0.223
+  over 23; co-gas-webdiplomacy-relh:v23 0.188 over 6; Bodhisattva:v4 0.185 over 29. webdip-nightjar:v1 (in the
+  field since round 56, 0.074 over 29) topped two of v15's round-86 games. No new entrants. Not reported (no
+  criterion met). No change proposed. Fetch the next rounds with `fetch_league.py press --policy scott-pidip:v15
+  --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
