@@ -85,7 +85,12 @@ health-only change, with clean health games; enter only with his go-ahead naming
   data. 57 games without press: mean 0.346. Field at 03:35Z: co-gas-webdiplomacy-relh:v23 0.302 over 21 now above
   v15 0.288 over 30, but it has shared no game with v15 since round 77 (v15 ahead 14, behind 8 in 22 shared; in
   those games co-gas 0.196, v15 0.363); grievous:v8 0.247 over 17; sovereign:v6 0.229 over 8; Bodhisattva:v4 0.210
-  over 29 (top score in 3 of v15's last 6); comax-pidip:v1 0.189 over 6. Reported to Scott. Fetch the next rounds with `fetch_league.py press --policy
+  over 29 (top score in 3 of v15's last 6); comax-pidip:v1 0.189 over 6. Reported to Scott. Look at the 12 weak
+  games (rounds 78 to 81 against 64 to 77): the power draw predicts 0.375 (v15's by-power means over all 54), so not
+  the draw; v15 scored lower beside every opponent seen 4+ times in both periods, so not one rival; centres by year
+  match to 1902 (4.4, 4.9) then stall (1908: 6.6 against 8.8; 10+ centres at the end in 4 of 12 against 19 of 42);
+  top scorer in v15's games: v15 3 of 12 against 20 of 42, Bodhisattva:v4 4 of 12. No single mechanism; may be
+  noise plus a stronger field. No change proposed. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
