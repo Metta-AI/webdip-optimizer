@@ -136,7 +136,10 @@ health-only change, with clean health games; enter only with his go-ahead naming
   0.47 against 0.37, the rest 0.27 to 0.33), with the same rivals seated as before. No single cause. v15 without
   press, rounds 64 to 96: 0.335 over 99. Field: v15 0.292 over 30 still leads; grievous:v8 0.203; sovereign:v6 0.196;
   co-gas-webdiplomacy-independent-relh:v4 0.190; comax-pidip:v1 0.172. No new entrants. Reported to Scott. No change
-  proposed. Fetch the next rounds with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
+  proposed. Monitoring stopped at 22:59Z 10-17 on Scott's word ("you can stop monitoring we are all done with this
+  thread for now"): the 3-hourly league-watch scheduled task is disabled, not deleted. v15 stays the league entry,
+  playing without press until the OpenRouter key has room again (monthly reset, inferred 2026-11-01). To resume,
+  fetch with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
