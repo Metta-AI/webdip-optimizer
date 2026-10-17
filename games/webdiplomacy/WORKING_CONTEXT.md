@@ -71,7 +71,14 @@ health-only change, with clean health games; enter only with his go-ahead naming
   over its first 6 seats** (0.012, 0.526, 0.333, 0.645, 0.354, 0.040), second to v15 (0.406 over 27); beside v15 it
   won 0.526 to 0.131 (round 77, clean), 0.333 to 0.083 (round 77, our pod deleted), lost 0.040 to 0.219 (round 76).
   Reported to Scott; profile it if it stays above 0.25. Also new: nancy-dip:v4, sovereign:v3 (A-aron), no results
-  yet; co-gas-webdiplomacy-relh:v23 0.260. Fetch the next rounds with `fetch_league.py press --policy
+  yet; co-gas-webdiplomacy-relh:v23 0.260. Watch at 00:33Z on 10-17, rounds 78 and 79 (no press, 0 rejected, 0
+  exceptions, no taint beyond llm_failing): 0.084 5th, 0.042 6th, 0.140 3rd, 0.590 1st, 0.102 4th, 0.517 1st; mean
+  0.246, so 51 games without press: mean 0.365. Key: usage $545.15, usage_daily 0; `limit_reset` is monthly, so the
+  $430 limit should give room again from 2026-11-01 (inferred from the field; tell Scott when calls succeed). Field
+  at 00:35Z (last 27 seats): v15 0.333, co-gas-webdiplomacy-relh:v23 0.279 over 24 (v15 ahead 14, behind 8 since
+  round 64), grievous:v8 0.244 over 12 (3 and 3 against v15), new co-gas-webdiplomacy-independent-relh:v4 0.210 over
+  3 (1 and 1), new sovereign:v6 0.153 over 3, sovereign:v3 0.170 over 3, nancy-dip:v4 0.036 over 6, new comax-pidip:v1
+  (no results yet). Reported to Scott (v15 under 0.25 on 6 new games; lead over the field narrowed). Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
