@@ -90,8 +90,15 @@ health-only change, with clean health games; enter only with his go-ahead naming
   the draw; v15 scored lower beside every opponent seen 4+ times in both periods, so not one rival; centres by year
   match to 1902 (4.4, 4.9) then stall (1908: 6.6 against 8.8; 10+ centres at the end in 4 of 12 against 19 of 42);
   top scorer in v15's games: v15 3 of 12 against 20 of 42, Bodhisattva:v4 4 of 12. No single mechanism; may be
-  noise plus a stronger field. No change proposed. Fetch the next rounds with `fetch_league.py press --policy
-  scott-pidip:v15 --rounds 3`.
+  noise plus a stronger field. No change proposed. 06:33Z 10-17 check: rounds 82 and 83, 6 games, v15 0.398 a game
+  (0.368, 0.598, 0.256, 1.000 as a France solo, 0.000, 0.167; places 2, 1, 2, 1, 7, 3); rejected 0, exceptions 0,
+  http errors 1 a round, every LLM call failed (key still dry: limit_remaining 0). v15 without press, rounds 64 to
+  83: 0.356 over 60, so the 12 weak games were followed by 6 strong ones. Field: grievous:v8 0.300 over 23 now
+  leads the window, v15 0.288 over 27 (v15 ahead 5, behind 5 in 10 shared, mean v15 - grievous -0.014);
+  co-gas-webdiplomacy-relh:v23 0.243 over 12; sovereign:v6 0.207 over 14;
+  co-gas-webdiplomacy-independent-relh:v4 0.198 over 14 (v15 ahead 2, behind 4 in 7 shared, -0.014); Bodhisattva:v4
+  0.197 over 26. New: nancy-dip:v5 0.006 over 3. Not reported (no criterion met). No change proposed. Fetch the
+  next rounds with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
