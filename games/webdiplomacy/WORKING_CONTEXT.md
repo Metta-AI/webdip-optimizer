@@ -116,8 +116,17 @@ health-only change, with clean health games; enter only with his go-ahead naming
   v15 without press, rounds 64 to 91: 0.360 over 84. Field (every row now 27 to 30 seats): v15 0.377 over 30;
   grievous:v8 0.276 over 30 (v15 ahead 7, behind 10 in 17 shared, +0.011); sovereign:v6 0.210;
   co-gas-webdiplomacy-independent-relh:v4 0.181; comax-pidip:v1 0.177; Bodhisattva:v4 down to 0.099. No new
-  entrants or versions. Not reported (no criterion met). No change proposed. Fetch the next rounds with
-  `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
+  entrants or versions. Not reported (no criterion met). No change proposed. 18:33Z 10-17 check: rounds 92 and 93,
+  6 games, v15 0.114 a game (0.018 Russia, 0.183 France, 0.078 Germany, 0.000 Russia, 0.299 Italy, 0.109 Turkey;
+  places 6, 3, 5, 7, 1, 5); rejected 0, exceptions 0, http errors 2 (both 400s at game end, after the last decision,
+  as in earlier rounds); every LLM call failed (key still dry). Against the 84 games before (0.360, sd 0.313): z
+  -1.9; 6 random games of those score 0.115 or less 1.2% of the time; no 6 consecutive games before went below 0.18.
+  Power draw is not it (v15's by-power means predict about 0.34). A different policy topped each game (sovereign:v6,
+  grievous:v8, nightjar/grievous, co-gas-independent:v4, v15, Bodhisattva:v4). v15 without press, rounds 64 to 93:
+  0.344 over 90. Field: v15 0.325 over 27 still leads; sovereign:v6 0.211; co-gas-webdiplomacy-independent-relh:v4
+  0.210; grievous:v8 0.191; comax-pidip:v1 0.175; webdip-nightjar:v1 0.158. No new entrants. Reported to Scott (6-game
+  mean below 0.25). No change proposed; if the next batch is also weak, read those games. Fetch the next rounds
+  with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
