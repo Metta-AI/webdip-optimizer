@@ -125,8 +125,18 @@ health-only change, with clean health games; enter only with his go-ahead naming
   grievous:v8, nightjar/grievous, co-gas-independent:v4, v15, Bodhisattva:v4). v15 without press, rounds 64 to 93:
   0.344 over 90. Field: v15 0.325 over 27 still leads; sovereign:v6 0.211; co-gas-webdiplomacy-independent-relh:v4
   0.210; grievous:v8 0.191; comax-pidip:v1 0.175; webdip-nightjar:v1 0.158. No new entrants. Reported to Scott (6-game
-  mean below 0.25). No change proposed; if the next batch is also weak, read those games. Fetch the next rounds
-  with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
+  mean below 0.25). No change proposed; if the next batch is also weak, read those games. 21:33Z 10-17 check: rounds
+  94 to 96, 9 games, v15 0.249 a game (0.005 Austria, 0.203, 0.753 England, 0.087 Russia, 0.677 Turkey, 0.388 France,
+  0.015 Russia, 0.041 Germany, 0.068 Russia; places 7, 3, 1, 5, 1, 1, 6, 5, 5); rejected 0, exceptions 0, http
+  errors 0 to 1 a round; key still dry. Read of rounds 92 to 96 (15 games, 0.195): all on Coworld 0.7.15, like every
+  round since 64; Russia drawn 5 times (v15's weakest powers: Austria 0.17, Germany 0.21, Russia 0.23 over rounds 64
+  to 91), but the draw predicts 0.346, so v15 is 0.152 a game under it (z -2.2 on residual sd 0.264; the split was
+  chosen after seeing the data). centre_losses.py: 3.40 centres lost a game against 2.77 in rounds 82 to 91, earlier
+  (1903: 0.80 a game against 0.33), spread over rivals (daf-diplomacy:v1 0.67 a game against 0.33, webdip-nightjar:v1
+  0.47 against 0.37, the rest 0.27 to 0.33), with the same rivals seated as before. No single cause. v15 without
+  press, rounds 64 to 96: 0.335 over 99. Field: v15 0.292 over 30 still leads; grievous:v8 0.203; sovereign:v6 0.196;
+  co-gas-webdiplomacy-independent-relh:v4 0.190; comax-pidip:v1 0.172. No new entrants. Reported to Scott. No change
+  proposed. Fetch the next rounds with `fetch_league.py press --policy scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
   redeployed at policies commit 4f8590f or later (auto mode blocks a production deploy without Scott's word) and
