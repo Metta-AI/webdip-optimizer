@@ -78,7 +78,14 @@ health-only change, with clean health games; enter only with his go-ahead naming
   at 00:35Z (last 27 seats): v15 0.333, co-gas-webdiplomacy-relh:v23 0.279 over 24 (v15 ahead 14, behind 8 since
   round 64), grievous:v8 0.244 over 12 (3 and 3 against v15), new co-gas-webdiplomacy-independent-relh:v4 0.210 over
   3 (1 and 1), new sovereign:v6 0.153 over 3, sovereign:v3 0.170 over 3, nancy-dip:v4 0.036 over 6, new comax-pidip:v1
-  (no results yet). Reported to Scott (v15 under 0.25 on 6 new games; lead over the field narrowed). Fetch the next rounds with `fetch_league.py press --policy
+  (no results yet). Reported to Scott (v15 under 0.25 on 6 new games; lead over the field narrowed). Watch at
+  03:33Z on 10-17, rounds 80 and 81 (no press, 0 rejected, 0 exceptions, 3 HTTP errors): 0.325 2nd, 0.000 7th
+  (Russia, eliminated), 0.117 4th, 0.045 6th, 0.522 1st, 0.108 5th; mean 0.186. Rounds 78 to 81: 0.216 over 12 (sd
+  0.21) against 0.390 over 42 in rounds 64 to 77 (sd 0.34): -0.174 +/- 0.080, z -2.2, split chosen after seeing the
+  data. 57 games without press: mean 0.346. Field at 03:35Z: co-gas-webdiplomacy-relh:v23 0.302 over 21 now above
+  v15 0.288 over 30, but it has shared no game with v15 since round 77 (v15 ahead 14, behind 8 in 22 shared; in
+  those games co-gas 0.196, v15 0.363); grievous:v8 0.247 over 17; sovereign:v6 0.229 over 8; Bodhisattva:v4 0.210
+  over 29 (top score in 3 of v15's last 6); comax-pidip:v1 0.189 over 6. Reported to Scott. Fetch the next rounds with `fetch_league.py press --policy
   scott-pidip:v15 --rounds 3`.
 - v16 (press-aware values, `experiments/2026-10-15-v16-press-aware-values.md`) is uploaded. Offline it moves the
   pick in 22 of 295 ally phases, no better against the real orders (-0.0006 +/- 0.0005 a phase): test v17 first. It needs the endpoint
