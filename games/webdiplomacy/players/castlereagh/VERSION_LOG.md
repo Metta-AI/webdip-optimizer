@@ -62,3 +62,24 @@ justified it, the human's recorded go-ahead, and the rollback plan.
 - **Rollback:** resubmit `scott-pidip:v7` (`044a0425-e107-456a-83d7-765b9ad25cc9`) as macromackie:
   `coworld submit scott-pidip:v7 --league league_1bccc63d-cd0a-47d7-92d7-e762797b5f1c --player
   ply_5b832230-f519-4af8-adda-bb3e02349b7d --no-open-browser`.
+
+### 2026-10-20 17:57Z: scott-pidip:v19 enters league_1bccc63d (classic press) in place of v15
+
+- **Acting player:** macromackie (`ply_5b832230-f519-4af8-adda-bb3e02349b7d`). **League:**
+  `league_1bccc63d-cd0a-47d7-92d7-e762797b5f1c`, classic press. **Version:** `scott-pidip:v19`
+  (`1b2bca53-eaf4-478a-8204-17f7b64f327f`). It is v15's image `pidip:hybrid-pinguard2`, unchanged, with two routes:
+  - Sol's press calls go through the platform's LLM sidecar (`--use-llm --llm-model openai/gpt-6.1-sol`, no
+    endpoint). They are metered under the league's $0.50 seat cap.
+  - Diplodocus calls go straight to the Modal endpoint through the egress relay (`--https-host`, with policy
+    secrets `META_URL`, `META_MODEL` and `META_KEY`).
+  - Uploaded with coworld 0.1.60.
+- **Why:** v15 has had no press since 10-16 02:42Z because the router's OpenRouter key is out of credit. Scott
+  asked at 16:28Z on 10-20 for a version whose Sol calls go through the league's own model service ("please do
+  this").
+- **Evidence:** 3 short private health games beside v15, `xreq_cd28b8a6` and `xreq_2ef0e200`. v19 had 0 rejected
+  orders, 0 exceptions, 0 http errors and 48 model calls with 0 failed. It sent 26 press messages and answered
+  every Diplodocus call. In the game at the $0.50 seat cap it made 39 calls for $0.146. v19 has not been measured
+  head to head against v15. The case rests on v15's league record: 0.546 a game with press, 0.335 without.
+- **Go-ahead:** Scott, 17:56Z: "enter v19".
+- **Result:** submission `sub_e895bd6a-53e6-4fb3-a80e-4e8183fde5cc` at 17:57Z. By 17:58Z v19 was active and the
+  champion, and v15 was benched.
